@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NightSCRY Team — See Everything. Exploit Weakness.</title>
+<meta name="description" content="NightSCRY Team — offensive security collective. Reverse engineering on desktop & mobile software, web and API penetration testing." />
+<link rel="icon" type="image/webp" href="logo.webp" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ░░ Animated background layers ░░ -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+<canvas id="matrix" aria-hidden="true"></canvas>
+
+<!-- ░░ NAVBAR ░░ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="NightSCRY home">
+    <span class="brand-mark" id="navLogo"></span>
+    <span class="brand-text">NIGHT<span class="accent">SCRY</span></span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#services">Services</a>
+    <a href="#arsenal">Arsenal</a>
+    <a href="#method">Methodology</a>
+    <a href="#operators">Operators</a>
+    <a href="#contact" class="nav-cta">Engage</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ░░ HERO ░░ -->
+  <section class="hero">
+    <div class="hero-logo" id="heroLogo"></div>
+    <h1 class="hero-title">NIGHT<span class="accent">SCRY</span><span class="cursor">_</span></h1>
+    <p class="hero-tag"><span class="br">[</span><span class="hero-tag-txt">SEE&nbsp;EVERYTHING. <span class="accent">EXPLOIT&nbsp;WEAKNESS.</span></span><span class="br">]</span></p>
+    <p class="hero-sub">
+      An offensive security collective. We tear apart desktop &amp; mobile binaries,
+      and break web applications &amp; APIs — before the adversary does.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Request an Engagement</a>
+      <a href="#services" class="btn btn-ghost">View Capabilities</a>
+    </div>
+    <ul class="hero-stats">
+      <li><b data-count="4">0</b><span>Attack surfaces covered</span></li>
+      <li><b data-count="9">0</b><span>/10 highest-severity finding</span></li>
+      <li><b data-count="1">0</b><span>Commercial license cracked</span></li>
+      <li><b data-count="100">0</b><span>% authorized scope</span></li>
+    </ul>
+  </section>
+
+  <!-- ░░ SERVICES ░░ -->
+  <section class="section" id="services">
+    <div class="section-head">
+      <span class="kicker">// Capabilities</span>
+      <h2>Four edges. One unblinking eye.</h2>
+      <p>Full-spectrum offensive coverage across the surfaces that matter.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-ico">
+          <svg viewBox="0 0 24 24"><path d="M4 5h16v10H4z M2 19h20 M8 19v-2 M16 19v-2" /></svg>
+        </div>
+        <h3>Desktop RE</h3>
+        <p>Static &amp; dynamic reverse engineering of Windows, macOS and Linux binaries. Anti-tamper, licensing &amp; protection bypass, malware-grade analysis.</p>
+        <ul class="tags"><li>Ghidra</li><li>IDA</li><li>x64dbg</li><li>Frida</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-ico">
+          <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        </div>
+        <h3>Mobile RE</h3>
+        <p>Android &amp; iOS deep teardown — root/jailbreak &amp; SSL-pinning bypass, IPC abuse, insecure storage, runtime instrumentation per OWASP MASTG.</p>
+        <ul class="tags"><li>jadx</li><li>apktool</li><li>Frida</li><li>Objection</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-ico">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18 M12 3c3 3 3 15 0 18 M12 3c-3 3-3 15 0 18"/></svg>
+        </div>
+        <h3>Web Pentest</h3>
+        <p>OWASP Top 10 &amp; business-logic abuse. Auth/authz bypass, every injection class, chained exploitation to prove real-world impact.</p>
+        <ul class="tags"><li>Burp</li><li>SQLi</li><li>XSS</li><li>SSTI</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-ico">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16 M4 12h16 M4 17h16 M8 4v16 M16 4v16"/></svg>
+        </div>
+        <h3>API Pentest</h3>
+        <p>REST, GraphQL &amp; SOAP. JWT/OAuth flaws, broken object-level auth, mass assignment, rate-limit &amp; abuse testing against your contracts.</p>
+        <ul class="tags"><li>JWT</li><li>GraphQL</li><li>BOLA</li><li>OAuth</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ░░ ARSENAL ░░ -->
+  <section class="section" id="arsenal">
+    <div class="section-head">
+      <span class="kicker">// Arsenal</span>
+      <h2>Tooling forged for the hunt</h2>
+      <p>Battle-tested instruments plus in-house automation.</p>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>GHIDRA</span><span>IDA PRO</span><span>BINARY NINJA</span><span>FRIDA</span><span>BURP SUITE</span><span>METASPLOIT</span><span>RADARE2</span><span>JADX</span><span>SQLMAP</span><span>WIRESHARK</span><span>AFL++</span><span>SEMGREP</span>
+        <span>GHIDRA</span><span>IDA PRO</span><span>BINARY NINJA</span><span>FRIDA</span><span>BURP SUITE</span><span>METASPLOIT</span><span>RADARE2</span><span>JADX</span><span>SQLMAP</span><span>WIRESHARK</span><span>AFL++</span><span>SEMGREP</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ METHODOLOGY ░░ -->
+  <section class="section" id="method">
+    <div class="section-head">
+      <span class="kicker">// Methodology</span>
+      <h2>How we scry</h2>
+      <p>Disciplined, scoped, evidence-driven — aligned to OWASP, MASVS &amp; NIST 800-115.</p>
+    </div>
+    <ol class="timeline">
+      <li>
+        <span class="tl-no">01</span>
+        <h3>Recon &amp; Scoping</h3>
+        <p>Define rules of engagement, map the attack surface, enumerate every reachable component.</p>
+      </li>
+      <li>
+        <span class="tl-no">02</span>
+        <h3>Analysis &amp; RE</h3>
+        <p>Decompile, instrument and fuzz. Understand the target from the inside out.</p>
+      </li>
+      <li>
+        <span class="tl-no">03</span>
+        <h3>Exploitation</h3>
+        <p>Weaponize findings into reliable proof-of-concepts that demonstrate true impact.</p>
+      </li>
+      <li>
+        <span class="tl-no">04</span>
+        <h3>Report &amp; Remediate</h3>
+        <p>CVSS-scored findings, reproduction steps and remediation guidance. Re-test on fix.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ░░ OPERATORS ░░ -->
+  <section class="section" id="operators">
+    <div class="section-head">
+      <span class="kicker">// Operators</span>
+      <h2>The eyes in the dark</h2>
+      <p>A tight cell of specialists. Handles only — for obvious reasons.</p>
+    </div>
+    <div class="cards ops">
+      <article class="op">
+        <div class="op-avatar" data-tag="FULL"><img src="https://github.com/doggoAngel.png" alt="doggoAngel" /></div>
+        <h3>doggoAngel</h3>
+        <span class="op-role">Full-Spectrum Operator</span>
+        <p>Web, API, mobile and desktop pentesting, plus reverse engineering.</p>
+      </article>
+      <article class="op">
+        <div class="op-avatar" data-tag="RE"><img src="https://github.com/mariettone.png" alt="mariettone" /></div>
+        <h3>mariettone</h3>
+        <span class="op-role">Reverse Engineer</span>
+        <p>Reverse engineering across desktop and mobile targets.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT ░░ -->
+  <section class="section contact" id="contact">
+    <div class="contact-panel">
+      <div class="section-head left">
+        <span class="kicker">// Engage</span>
+        <h2>Point us at a target.</h2>
+        <p>Authorized engagements only. Tell us the scope — we'll tell you where it breaks.</p>
+      </div>
+      <form class="form" id="engageForm" novalidate>
+        <div class="field">
+          <label for="org">Organization</label>
+          <input id="org" name="org" type="text" placeholder="ACME Corp" required />
+        </div>
+        <div class="field">
+          <label for="email">Contact email</label>
+          <input id="email" name="email" type="email" placeholder="security@acme.com" required />
+        </div>
+        <div class="field">
+          <label for="scope">Engagement type</label>
+          <select id="scope" name="scope">
+            <option>Desktop Reverse Engineering</option>
+            <option>Mobile Reverse Engineering</option>
+            <option>Web Application Pentest</option>
+            <option>API Pentest</option>
+            <option>Full-spectrum / Red Team</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="brief">Brief</label>
+          <textarea id="brief" name="brief" rows="4" placeholder="Targets, scope, timeline, authorization details..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full">Transmit Request</button>
+        <p class="form-note" id="formNote" hidden>◉ Opening your email client — send the pre-filled message to reach us.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="footer">
+  <div class="footer-brand">
+    <span class="brand-mark sm" id="footLogo"></span>
+    <span>NIGHT<span class="accent">SCRY</span> TEAM</span>
+  </div>
+  <p class="footer-tag"><span class="br">[</span><span class="footer-tag-txt">SEE&nbsp;EVERYTHING. EXPLOIT&nbsp;WEAKNESS.</span><span class="br">]</span></p>
+  <p class="footer-fine">Offensive security collective · Authorized testing only · © <span id="yr"></span></p>
+</footer>
+
+<script src="logo.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
