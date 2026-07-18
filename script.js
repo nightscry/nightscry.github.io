@@ -55,8 +55,8 @@ document.querySelectorAll('.hero-stats b').forEach((b) => statIO.observe(b));
 document.getElementById('engageForm')?.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // email di destinazione del team — SOSTITUISCI con quella vera
-  const TEAM_EMAIL = 'team@nightscry.io';
+  // email di destinazione del team
+  const TEAM_EMAIL = 'nightscry.team@outlook.com';
 
   const org   = document.getElementById('org').value.trim();
   const email = document.getElementById('email').value.trim();
