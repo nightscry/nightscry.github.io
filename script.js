@@ -1,13 +1,10 @@
-/* ── inject logos ── */
 ['navLogo', 'heroLogo', 'footLogo'].forEach((id) => {
   const el = document.getElementById(id);
   if (el && window.NightSCRYLogo) el.innerHTML = window.NightSCRYLogo(id);
 });
 
-/* ── year ── */
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-/* ── mobile nav ── */
 const toggle = document.getElementById('navToggle');
 const nav = document.getElementById('nav');
 toggle?.addEventListener('click', () => {
@@ -18,12 +15,10 @@ document.querySelectorAll('.nav-links a').forEach((a) =>
   a.addEventListener('click', () => nav.classList.remove('open'))
 );
 
-/* ── shrink nav on scroll ── */
 addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', scrollY > 24);
 });
 
-/* ── reveal on scroll ── */
 const io = new IntersectionObserver(
   (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('in')),
   { threshold: 0.15 }
@@ -33,7 +28,6 @@ document.querySelectorAll('.section, .card, .op, .timeline li').forEach((el) => 
   io.observe(el);
 });
 
-/* ── animated stat counters ── */
 const statIO = new IntersectionObserver((entries) => {
   entries.forEach((e) => {
     if (!e.isIntersecting) return;
@@ -51,11 +45,9 @@ const statIO = new IntersectionObserver((entries) => {
 }, { threshold: 0.6 });
 document.querySelectorAll('.hero-stats b').forEach((b) => statIO.observe(b));
 
-/* ── contact form (frontend only) ── */
 document.getElementById('engageForm')?.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // email di destinazione del team
   const TEAM_EMAIL = 'nightscry.team@outlook.com';
 
   const org   = document.getElementById('org').value.trim();
@@ -71,7 +63,6 @@ document.getElementById('engageForm')?.addEventListener('submit', (e) => {
     `Brief:\n${brief}\n`
   );
 
-  // apre il client di posta con l'email già compilata verso il team
   window.location.href = `mailto:${TEAM_EMAIL}?subject=${subject}&body=${body}`;
 
   const note = document.getElementById('formNote');
@@ -79,7 +70,6 @@ document.getElementById('engageForm')?.addEventListener('submit', (e) => {
   e.target.reset();
 });
 
-/* ── matrix rain backdrop ── */
 (function matrix() {
   const c = document.getElementById('matrix');
   if (!c) return;
@@ -97,11 +87,11 @@ document.getElementById('engageForm')?.addEventListener('submit', (e) => {
   resize();
   addEventListener('resize', resize);
 
-  const STEP_MS = 130; // lower = faster rain
+  const STEP_MS = 130;
   let last = 0;
   function draw(now) {
     requestAnimationFrame(draw);
-    if (now - last < STEP_MS) return; // gate the fall speed
+    if (now - last < STEP_MS) return;
     last = now;
 
     ctx.fillStyle = 'rgba(4,3,9,0.10)';
