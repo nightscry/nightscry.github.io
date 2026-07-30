@@ -198,6 +198,7 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(135deg, transparent, rgba(168,85,247,.45), transparent);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity .3s;
+  pointer-events: none; /* decorative only — must never swallow clicks */
 }
 .card:hover { transform: translateY(-8px); border-color: rgba(168,85,247,.45); box-shadow: 0 20px 50px rgba(88,28,135,.35); }
 .card:hover::before { opacity: 1; }
@@ -264,6 +265,87 @@ a { color: inherit; text-decoration: none; }
 .op h3 { font-family: 'JetBrains Mono', monospace; color: var(--silver); font-size: 1.1rem; }
 .op-role { display: block; color: var(--purple-bright); font-weight: 600; letter-spacing: 1px; font-size: .82rem; text-transform: uppercase; margin: 4px 0 12px; }
 .op p { color: var(--txt-dim); font-size: .92rem; }
+
+/* ════════ PROJECTS ════════ */
+/* CTA closing the Arsenal marquee on the home page */
+.arsenal-cta { text-align: center; margin-top: 36px; }
+
+/* the projects page opens straight under the fixed navbar */
+.page-head { padding-top: clamp(120px, 16vw, 190px); }
+.page-head .section-head { margin-bottom: 34px; }
+
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 44px; }
+.chip {
+  font-family: 'JetBrains Mono', monospace; font-size: .76rem; letter-spacing: 1px;
+  text-transform: uppercase; padding: 7px 16px; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 6px; color: var(--txt-dim);
+  background: rgba(139, 92, 246, .06);
+  transition: color .2s, border-color .2s, background .2s, box-shadow .2s;
+}
+.chip:hover { color: var(--txt); border-color: var(--purple); }
+.chip.is-active {
+  color: var(--purple-soft); border-color: var(--purple);
+  background: rgba(139, 92, 246, .2); box-shadow: var(--glow);
+}
+
+/* capped track width so a lone card doesn't stretch; auto-fit collapses the
+   empty tracks that would otherwise push the grid off-centre */
+.projects {
+  grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 380px));
+  justify-content: center;
+}
+/* specificity kept above .card.proj so the order of these rules can't matter */
+.cards .card.is-hidden { display: none; }
+
+.card.proj { display: flex; flex-direction: column; cursor: pointer; }
+
+/* full-bleed preview: negative margins cancel the .card padding */
+.proj-shot {
+  position: relative; margin: -30px -26px 22px; overflow: hidden;
+  background: var(--bg-2); border-bottom: 1px solid var(--line);
+}
+.proj-shot img { display: block; width: 100%; height: auto; transition: transform .45s ease; }
+.card.proj:hover .proj-shot img { transform: scale(1.05); }
+
+.proj-status {
+  position: absolute; top: 12px; right: 12px; z-index: 1;
+  font-family: 'JetBrains Mono', monospace; font-size: .64rem; letter-spacing: 1.5px;
+  text-transform: uppercase; padding: 4px 9px; border-radius: 5px; white-space: nowrap;
+  color: var(--purple-soft); border: 1px solid var(--purple);
+  background: rgba(10, 7, 18, .82); backdrop-filter: blur(6px);
+}
+.proj .proj-line {
+  font-family: 'JetBrains Mono', monospace; font-size: .78rem;
+  color: var(--purple-soft); margin-bottom: 10px;
+}
+.card.proj .tags { margin-bottom: 22px; }
+.proj-foot {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+  margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line);
+}
+.proj-meta { font-family: 'JetBrains Mono', monospace; font-size: .72rem; color: var(--silver-dim); }
+.proj-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; font-size: .78rem;
+  color: var(--purple-soft); transition: color .2s, gap .2s;
+}
+.proj-link svg {
+  width: 15px; height: 15px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.proj-link:hover { color: #fff; gap: 11px; }
+/* stretched link: one real anchor covering the whole card, so no nested <a>.
+   inset resolves against .card, which is already position:relative. */
+.proj-link::after { content: ''; position: absolute; inset: 0; z-index: 2; border-radius: 14px; }
+
+.empty-note {
+  grid-column: 1 / -1; text-align: center; padding: 34px 20px;
+  font-family: 'JetBrains Mono', monospace; font-size: .85rem; color: var(--txt-dim);
+  border: 1px dashed var(--line); border-radius: 12px;
+}
+
+.nav-links a[aria-current='page'] { color: var(--txt); }
+.nav-links a[aria-current='page']:not(.nav-cta)::after { width: 100%; }
 
 /* ════════ CONTACT ════════ */
 .contact-panel {

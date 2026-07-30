@@ -3,7 +3,8 @@
   if (el && window.NightSCRYLogo) el.innerHTML = window.NightSCRYLogo(id);
 });
 
-document.getElementById('yr').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('yr');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 const toggle = document.getElementById('navToggle');
 const nav = document.getElementById('nav');

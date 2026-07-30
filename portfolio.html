@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects — NightSCRY Team</title>
+<meta name="description" content="NightSCRY Team projects — offensive tooling, vulnerability research and OSINT investigations, published on GitHub." />
+<link rel="icon" type="image/webp" href="logo.webp" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ░░ Animated background layers ░░ -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+<canvas id="matrix" aria-hidden="true"></canvas>
+
+<!-- ░░ NAVBAR ░░ -->
+<header class="nav" id="nav">
+  <a class="brand" href="index.html" aria-label="NightSCRY home">
+    <span class="brand-mark" id="navLogo"></span>
+    <span class="brand-text">NIGHT<span class="accent">SCRY</span></span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#arsenal">Arsenal</a>
+    <a href="portfolio.html" aria-current="page">Projects</a>
+    <a href="index.html#method">Methodology</a>
+    <a href="index.html#operators">Operators</a>
+    <a href="index.html#contact" class="nav-cta">Engage</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ░░ PROJECTS ░░ -->
+  <section class="section page-head" id="projects">
+    <div class="section-head">
+      <span class="kicker">// Projects</span>
+      <h2>Forged in-house, released in the open.</h2>
+      <p>Offensive tooling, vulnerability research and OSINT investigations from the NightSCRY cell.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter projects by category">
+      <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="chip" data-filter="tool" aria-pressed="false">Tools</button>
+      <button type="button" class="chip" data-filter="research" aria-pressed="false">Research</button>
+      <button type="button" class="chip" data-filter="osint" aria-pressed="false">OSINT</button>
+    </div>
+
+    <div class="cards projects" id="projectGrid">
+
+      <article class="card proj" data-cat="tool osint">
+        <div class="proj-shot">
+          <img src="assets/eyetrace-graph.webp" width="800" height="588" loading="lazy" decoding="async"
+               alt="EyeTrace tracing a Bitcoin wallet: its counterparty addresses drawn as a force-directed graph, with balance and address in the side panel." />
+          <span class="proj-status">Beta</span>
+        </div>
+        <h3>EyeTrace</h3>
+        <p class="proj-line">See every transaction. Trace every wallet.</p>
+        <p>
+          Multi-chain blockchain intelligence and wallet transaction tracer. It identifies the chain from
+          the address alone through cryptographic checksum validation — Base58Check, Bech32/Bech32m,
+          EIP-55 — then maps the counterparties as an interactive force-directed graph. Three keyless
+          connectors, no API keys to configure.
+        </p>
+        <ul class="tags"><li>Go</li><li>Fyne v2</li><li>Blockchain</li><li>OSINT</li></ul>
+        <div class="proj-foot">
+          <span class="proj-meta">MIT · Go 1.25</span>
+          <a class="proj-link" href="https://github.com/nightscry/EyeTrace"
+             target="_blank" rel="noopener noreferrer" aria-label="EyeTrace source on GitHub">
+            Source
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7 M9 7h8v8" /></svg>
+          </a>
+        </div>
+      </article>
+
+      <p class="empty-note" id="projectsEmpty" hidden>◉ Nothing published in this category yet — check back soon.</p>
+    </div>
+  </section>
+</main>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="footer">
+  <div class="footer-brand">
+    <span class="brand-mark sm" id="footLogo"></span>
+    <span>NIGHT<span class="accent">SCRY</span> TEAM</span>
+  </div>
+  <p class="footer-tag"><span class="br">[</span><span class="footer-tag-txt">SEE&nbsp;EVERYTHING. EXPLOIT&nbsp;WEAKNESS.</span><span class="br">]</span></p>
+  <p class="footer-fine">Offensive security collective · Authorized testing only · © <span id="yr"></span></p>
+</footer>
+
+<script src="logo.js"></script>
+<script src="script.js"></script>
+<script src="portfolio.js"></script>
+</body>
+</html>
