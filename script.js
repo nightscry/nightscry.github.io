@@ -110,3 +110,83 @@ document.getElementById('engageForm')?.addEventListener('submit', (e) => {
   }
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) requestAnimationFrame(draw);
 })();
+
+/* ── easter egg: a mini cross of Jesus that reveals itself inside the pupil ──
+   auto-flashes at random intervals; also on 5 quick clicks of the eye. */
+(function crossEgg() {
+  const hero = document.getElementById('heroLogo');
+  if (!hero) return;
+  const eye = hero.querySelector('.ns-eye');
+  if (!eye) return;
+
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let hideT = null;
+
+  function flash(ms) {
+    eye.classList.remove('ns-reveal-cross');
+    void eye.offsetWidth;            // restart the animation
+    eye.classList.add('ns-reveal-cross');
+    clearTimeout(hideT);
+    hideT = setTimeout(() => eye.classList.remove('ns-reveal-cross'), ms);
+  }
+
+  // reveal once shortly after load
+  setTimeout(() => flash(2800), 700);
+
+  // auto: peek out every ~25–65s for a couple of seconds
+  if (!reduce) {
+    (function loop() {
+      const wait = 25000 + Math.random() * 40000;
+      setTimeout(() => { flash(2600); loop(); }, wait);
+    })();
+  }
+
+  // bonus: 5 quick clicks on the eye
+  eye.style.cursor = 'pointer';
+  let clicks = 0, tapT = null;
+  eye.addEventListener('click', (e) => {
+    e.stopPropagation();
+    clicks++;
+    clearTimeout(tapT);
+    tapT = setTimeout(() => (clicks = 0), 1500);
+    if (clicks >= 5) { clicks = 0; flash(5000); }
+  });
+})();
+
+/* ── easter egg: random mini crosses drift in as the user scrolls ── */
+(function scrollCrossEgg() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let ticking = false, lastY = scrollY, lastSpawn = 0;
+  const CROSS = `<svg viewBox="0 0 60 100" fill="#f5e6c8" aria-hidden="true">
+      <rect x="25" y="6"  width="10" height="88" rx="3"/>
+      <rect x="6"  y="28" width="48" height="10" rx="3"/></svg>`;
+
+  function spawn() {
+    const el = document.createElement('div');
+    el.className = 'ns-scroll-cross';
+    el.innerHTML = CROSS;
+    const size = 14 + Math.random() * 24;
+    el.style.left = (5 + Math.random() * 90) + 'vw';
+    el.style.top  = (12 + Math.random() * 76) + 'vh';
+    el.style.width = size + 'px';
+    el.style.setProperty('--drift', (Math.random() * 40 - 20) + 'px');
+    document.body.appendChild(el);
+    requestAnimationFrame(() => el.classList.add('go'));
+    setTimeout(() => el.classList.add('out'), 2000);
+    setTimeout(() => el.remove(), 2700);
+  }
+
+  addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const now = performance.now();
+      if (Math.abs(scrollY - lastY) > 130 && now - lastSpawn > 2500 && Math.random() > 0.8) {
+        spawn(); lastSpawn = now;
+      }
+      lastY = scrollY;
+      ticking = false;
+    });
+  }, { passive: true });
+})();

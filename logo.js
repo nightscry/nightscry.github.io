@@ -38,7 +38,12 @@ window.NightSCRYLogo = function (id) {
         <circle cx="100" cy="100" r="42" fill="url(#ns-iris-${id})"/>
         <circle cx="100" cy="104" r="34" fill="url(#ns-core-${id})"/>
         <g filter="url(#ns-glow-${id})">
-          <path d="M100 74 C108 88 108 112 100 126 C92 112 92 88 100 74 Z" fill="#1a0633"/>
+          <path class="ns-pupil" d="M100 74 C108 88 108 112 100 126 C92 112 92 88 100 74 Z" fill="#1a0633"/>
+          <!-- easter egg: mini cross of Jesus, hidden inside the pupil -->
+          <g class="ns-cross" fill="#f5e6c8" stroke="#f5e6c8" stroke-width="0.6">
+            <rect x="98.6" y="86" width="2.8" height="28" rx="1"/>
+            <rect x="93" y="93.5" width="14" height="2.8" rx="1"/>
+          </g>
         </g>
       </g>
     </g>
