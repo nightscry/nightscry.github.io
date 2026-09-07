@@ -14,6 +14,16 @@
       en: 'Projects — NightSCRY Team',
     },
 
+    /* ── meta descriptions ── */
+    'meta.index': {
+      it: 'NightSCRY Team — offensive security. Reverse engineering su software desktop e mobile, penetration testing web e API.',
+      en: 'NightSCRY Team — offensive security. Reverse engineering on desktop and mobile software, web and API penetration testing.',
+    },
+    'meta.portfolio': {
+      it: 'Progetti NightSCRY Team — strumenti offensivi, vulnerability research e indagini OSINT, pubblicati su GitHub.',
+      en: 'NightSCRY Team projects — offensive tooling, vulnerability research and OSINT investigations, published on GitHub.',
+    },
+
     /* ── nav ── */
     'nav.services':  { it: 'Servizi',      en: 'Services' },
     'nav.arsenal':   { it: 'Arsenale',     en: 'Arsenal' },
@@ -167,6 +177,10 @@
     document.querySelectorAll('[data-i18n-title]').forEach((el) => {
       const v = I18N[el.getAttribute('data-i18n-title')];
       if (v && v[lang] != null) { el.textContent = v[lang]; document.title = v[lang]; }
+    });
+    document.querySelectorAll('[data-i18n-content]').forEach((el) => {
+      const v = I18N[el.getAttribute('data-i18n-content')];
+      if (v && v[lang] != null) el.setAttribute('content', v[lang]);
     });
 
     const btn = document.getElementById('langToggle');
