@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Projects — NightSCRY Team</title>
+<title data-i18n-title="title.portfolio">Progetti — NightSCRY Team</title>
 <meta name="description" content="NightSCRY Team projects — offensive tooling, vulnerability research and OSINT investigations, published on GitHub." />
 <link rel="icon" type="image/webp" href="logo.webp" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,13 +25,17 @@
     <span class="brand-text">NIGHT<span class="accent">SCRY</span></span>
   </a>
   <nav class="nav-links" aria-label="Primary">
-    <a href="index.html#services">Services</a>
-    <a href="index.html#arsenal">Arsenal</a>
-    <a href="portfolio.html" aria-current="page">Projects</a>
-    <a href="index.html#method">Methodology</a>
-    <a href="index.html#operators">Operators</a>
-    <a href="index.html#contact" class="nav-cta">Engage</a>
+    <a href="index.html#services" data-i18n="nav.services">Servizi</a>
+    <a href="index.html#arsenal" data-i18n="nav.arsenal">Arsenale</a>
+    <a href="portfolio.html" class="nav-hot" aria-current="page" data-i18n="nav.projects">Progetti</a>
+    <a href="index.html#method" data-i18n="nav.method">Metodologia</a>
+    <a href="index.html#about" data-i18n="nav.about">Chi sono</a>
+    <a href="index.html#contact" class="nav-cta" data-i18n="nav.engage">Ingaggia</a>
   </nav>
+  <a class="nav-social" href="https://www.linkedin.com/company/nightscry-team/" target="_blank" rel="noopener noreferrer" aria-label="NightSCRY Team su LinkedIn">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.24 8.25h4.47V24H.24V8.25zM8.34 8.25h4.29v2.15h.06c.6-1.13 2.06-2.32 4.24-2.32 4.53 0 5.37 2.98 5.37 6.86V24h-4.47v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.34V8.25z"/></svg>
+  </a>
+  <button class="lang-btn" id="langToggle" type="button" aria-label="Switch to English">EN</button>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -42,16 +46,16 @@
   <!-- ░░ PROJECTS ░░ -->
   <section class="section page-head" id="projects">
     <div class="section-head">
-      <span class="kicker">// Projects</span>
-      <h2>Forged in-house, released in the open.</h2>
-      <p>Offensive tooling, vulnerability research and OSINT investigations from the NightSCRY cell.</p>
+      <span class="kicker" data-i18n="proj.kicker">// Progetti</span>
+      <h2 data-i18n="proj.h2">Forgiati in casa, rilasciati in chiaro.</h2>
+      <p data-i18n="proj.p">Strumenti offensivi, vulnerability research e indagini OSINT.</p>
     </div>
 
     <div class="filters" role="group" aria-label="Filter projects by category">
-      <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
-      <button type="button" class="chip" data-filter="tool" aria-pressed="false">Tools</button>
-      <button type="button" class="chip" data-filter="research" aria-pressed="false">Research</button>
-      <button type="button" class="chip" data-filter="osint" aria-pressed="false">OSINT</button>
+      <button type="button" class="chip is-active" data-filter="all" aria-pressed="true" data-i18n="filter.all">Tutti</button>
+      <button type="button" class="chip" data-filter="tool" aria-pressed="false" data-i18n="filter.tool">Strumenti</button>
+      <button type="button" class="chip" data-filter="research" aria-pressed="false" data-i18n="filter.research">Research</button>
+      <button type="button" class="chip" data-filter="osint" aria-pressed="false" data-i18n="filter.osint">OSINT</button>
     </div>
 
     <div class="cards projects" id="projectGrid">
@@ -60,22 +64,22 @@
         <div class="proj-shot">
           <img src="assets/eyetrace-graph.webp" width="800" height="588" loading="lazy" decoding="async"
                alt="EyeTrace tracing a Bitcoin wallet: its counterparty addresses drawn as a force-directed graph, with balance and address in the side panel." />
-          <span class="proj-status">Beta</span>
+          <span class="proj-status" data-i18n="status.beta">Beta</span>
         </div>
         <h3>EyeTrace</h3>
-        <p class="proj-line">See every transaction. Trace every wallet.</p>
-        <p>
-          Multi-chain blockchain intelligence and wallet transaction tracer. It identifies the chain from
-          the address alone through cryptographic checksum validation — Base58Check, Bech32/Bech32m,
-          EIP-55 — then maps the counterparties as an interactive force-directed graph. Three keyless
-          connectors, no API keys to configure.
+        <p class="proj-line" data-i18n="eye.line">Vedi ogni transazione. Traccia ogni wallet.</p>
+        <p data-i18n="eye.desc">
+          Intelligence blockchain multi-chain e tracer delle transazioni dei wallet. Identifica la chain
+          dal solo indirizzo tramite validazione del checksum crittografico — Base58Check, Bech32/Bech32m,
+          EIP-55 — poi mappa le controparti come grafo interattivo force-directed. Tre connettori keyless,
+          nessuna API key da configurare.
         </p>
         <ul class="tags"><li>Go</li><li>Fyne v2</li><li>Blockchain</li><li>OSINT</li></ul>
         <div class="proj-foot">
           <span class="proj-meta">MIT · Go 1.25</span>
           <a class="proj-link" href="https://github.com/nightscry/EyeTrace"
              target="_blank" rel="noopener noreferrer" aria-label="EyeTrace source on GitHub">
-            Source
+            <span data-i18n="proj.link">Sorgente</span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7 M9 7h8v8" /></svg>
           </a>
         </div>
@@ -85,34 +89,29 @@
         <div class="proj-shot">
           <img src="assets/cover-italian-cybersecurity.png" width="800" height="588" loading="lazy" decoding="async"
                alt="EyeTrace tracing a Bitcoin wallet: its counterparty addresses drawn as a force-directed graph, with balance and address in the side panel." />
-          <span class="proj-status">Done</span>
+          <span class="proj-status" data-i18n="status.done">Fatto</span>
         </div>
         <h3>Italian Cybersecurity 🇮🇹☠️</h3>
-        <p class="proj-line">Italian Cybersecurity is something else.</p>
-        <p>
-          🇮🇹 “Ma sì, tanto chi vuoi che se ne accorga.”Apparently, that’s the Italian approach to web security. We were doing OSINT. Found a web application. Sent one character: ’
-          SQL ERROR.
-          Then Censys showed the same software across 36 exposed installations.
-          We didn’t exploit anything.
-          We didn’t touch customer data.
-          We stopped at the error.
-          One apostrophe.
-          36 installations.
-          Peak Italian cybersecurity. 💀
-          Full research in the PDF
+        <p class="proj-line" data-i18n="ita.line">La cybersecurity italiana è un’altra cosa.</p>
+        <p data-i18n="ita.desc">
+          🇮🇹 «Ma sì, tanto chi vuoi che se ne accorga.» A quanto pare è questo l’approccio italiano alla
+          web security. Stavo facendo OSINT. Ho trovato una web application. Inviato un carattere: ’
+          — SQL ERROR. Poi Censys ha mostrato lo stesso software su 36 installazioni esposte. Non ho
+          sfruttato nulla. Non ho toccato dati dei clienti. Mi sono fermato all’errore. Un apostrofo.
+          36 installazioni. Peak Italian cybersecurity. 💀 Ricerca completa nel PDF.
         </p>
         <ul class="tags"><li>Censys</li><li>SQL Injection</li><li>OSINT</li></ul>
         <div class="proj-foot">
           <span class="proj-meta">MIT </span>
           <a class="proj-link" href="pdf/Italian_Cybersecurity_-_Nightscry_OSINT_Report.pdf"
              target="_blank" rel="noopener noreferrer" aria-label="PDF research">
-            Source
+            <span data-i18n="proj.link">Sorgente</span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7 M9 7h8v8" /></svg>
           </a>
         </div>
       </article>
 
-      <p class="empty-note" id="projectsEmpty" hidden>◉ Nothing published in this category yet — check back soon.</p>
+      <p class="empty-note" id="projectsEmpty" data-i18n="empty.note" hidden>◉ Niente pubblicato in questa categoria — torna presto.</p>
     </div>
   </section>
 </main>
@@ -123,12 +122,14 @@
     <span class="brand-mark sm" id="footLogo"></span>
     <span>NIGHT<span class="accent">SCRY</span> TEAM</span>
   </div>
-  <p class="footer-tag"><span class="br">[</span><span class="footer-tag-txt">SEE&nbsp;EVERYTHING. EXPLOIT&nbsp;WEAKNESS.</span><span class="br">]</span></p>
-  <p class="footer-fine">Offensive security collective · Authorized testing only · © <span id="yr"></span></p>
+  <p class="footer-tag"><span class="br">[</span><span class="footer-tag-txt" data-i18n="footer.tag">VEDI&nbsp;TUTTO. SFRUTTA&nbsp;OGNI&nbsp;DEBOLEZZA.</span><span class="br">]</span></p>
+  <p class="footer-legal">Roberto Gianfranco Savi · P.IVA 04930840162 · <a href="mailto:nightscry.team@outlook.com">nightscry.team@outlook.com</a></p>
+  <p class="footer-fine"><span data-i18n="footer.fine">Offensive security · Solo test autorizzati · © </span><span id="yr"></span></p>
 </footer>
 
 <script src="logo.js"></script>
 <script src="script.js"></script>
 <script src="portfolio.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>

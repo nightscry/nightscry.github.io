@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>NightSCRY Team — See Everything. Exploit Weakness.</title>
-<meta name="description" content="NightSCRY Team — offensive security collective. Reverse engineering on desktop & mobile software, web and API penetration testing." />
+<title data-i18n-title="title.index">NightSCRY Team — Vedi tutto. Sfrutta ogni debolezza.</title>
+<meta name="description" content="NightSCRY Team — offensive security. Reverse engineering on desktop & mobile software, web and API penetration testing." />
 <link rel="icon" type="image/webp" href="logo.webp" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,13 +25,17 @@
     <span class="brand-text">NIGHT<span class="accent">SCRY</span></span>
   </a>
   <nav class="nav-links" aria-label="Primary">
-    <a href="#services">Services</a>
-    <a href="#arsenal">Arsenal</a>
-    <a href="portfolio.html">Projects</a>
-    <a href="#method">Methodology</a>
-    <a href="#operators">Operators</a>
-    <a href="#contact" class="nav-cta">Engage</a>
+    <a href="#services" data-i18n="nav.services">Servizi</a>
+    <a href="#arsenal" data-i18n="nav.arsenal">Arsenale</a>
+    <a href="portfolio.html" class="nav-hot" data-i18n="nav.projects">Progetti</a>
+    <a href="#method" data-i18n="nav.method">Metodologia</a>
+    <a href="#about" data-i18n="nav.about">Chi sono</a>
+    <a href="#contact" class="nav-cta" data-i18n="nav.engage">Ingaggia</a>
   </nav>
+  <a class="nav-social" href="https://www.linkedin.com/company/nightscry-team/" target="_blank" rel="noopener noreferrer" aria-label="NightSCRY Team su LinkedIn">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.24 8.25h4.47V24H.24V8.25zM8.34 8.25h4.29v2.15h.06c.6-1.13 2.06-2.32 4.24-2.32 4.53 0 5.37 2.98 5.37 6.86V24h-4.47v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.34V8.25z"/></svg>
+  </a>
+  <button class="lang-btn" id="langToggle" type="button" aria-label="Switch to English">EN</button>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -43,29 +47,39 @@
   <section class="hero">
     <div class="hero-logo" id="heroLogo"></div>
     <h1 class="hero-title">NIGHT<span class="accent">SCRY</span><span class="cursor">_</span></h1>
-    <p class="hero-tag"><span class="br">[</span><span class="hero-tag-txt">SEE&nbsp;EVERYTHING. <span class="accent">EXPLOIT&nbsp;WEAKNESS.</span></span><span class="br">]</span></p>
-    <p class="hero-sub">
-      An offensive security collective. We tear apart desktop &amp; mobile binaries,
-      and break web applications &amp; APIs — before the adversary does.
+    <p class="hero-tag"><span class="br">[</span><span class="hero-tag-txt" data-i18n="hero.tag">VEDI&nbsp;TUTTO. <span class="accent">SFRUTTA&nbsp;OGNI&nbsp;DEBOLEZZA.</span></span><span class="br">]</span></p>
+    <p class="hero-sub" data-i18n="hero.sub">
+      Offensive security su misura. Reverse engineering di binari desktop &amp; mobile e attacchi ad
+      applicazioni web &amp; API — prima che lo faccia l’avversario.
     </p>
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Request an Engagement</a>
-      <a href="#services" class="btn btn-ghost">View Capabilities</a>
+      <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Richiedi un ingaggio</a>
+      <a href="#services" class="btn btn-ghost" data-i18n="hero.cta2">Vedi le capacità</a>
     </div>
     <ul class="hero-stats">
-      <li><b data-count="4">0</b><span>Attack surfaces covered</span></li>
-      <li><b data-count="9">0</b><span>/10 highest-severity finding</span></li>
-      <li><b data-count="1">0</b><span>Commercial license cracked</span></li>
-      <li><b data-count="100">0</b><span>% authorized scope</span></li>
+      <li><b data-count="4">0</b><span data-i18n="stat.surfaces">Superfici d’attacco coperte</span></li>
+      <li><b data-count="9">0</b><span data-i18n="stat.severity">/10 finding di severità massima</span></li>
+      <li><b data-count="2">0</b><span data-i18n="stat.re">Software analizzati in reverse</span></li>
+      <li><b data-count="100">0</b><span data-i18n="stat.scope">% di scope autorizzato</span></li>
     </ul>
+  </section>
+
+  <!-- ░░ PORTFOLIO SPOTLIGHT ░░ -->
+  <section class="section spotlight" id="portfolio">
+    <div class="spotlight-inner">
+      <span class="kicker" data-i18n="spot.kicker">// Portfolio</span>
+      <h2 data-i18n="spot.h2">In prima linea: i progetti rilasciati.</h2>
+      <p data-i18n="spot.p">Strumenti offensivi, vulnerability research e indagini OSINT — sviluppati in proprio e rilasciati in chiaro.</p>
+      <a href="portfolio.html" class="btn btn-primary" data-i18n="spot.btn">Esplora il portfolio</a>
+    </div>
   </section>
 
   <!-- ░░ SERVICES ░░ -->
   <section class="section" id="services">
     <div class="section-head">
-      <span class="kicker">// Capabilities</span>
-      <h2>Four edges. One unblinking eye.</h2>
-      <p>Full-spectrum offensive coverage across the surfaces that matter.</p>
+      <span class="kicker" data-i18n="serv.kicker">// Capacità</span>
+      <h2 data-i18n="serv.h2">Quattro fronti. Un occhio che non si chiude.</h2>
+      <p data-i18n="serv.p">Copertura offensiva a spettro completo sulle superfici che contano.</p>
     </div>
     <div class="cards">
       <article class="card">
@@ -73,7 +87,7 @@
           <svg viewBox="0 0 24 24"><path d="M4 5h16v10H4z M2 19h20 M8 19v-2 M16 19v-2" /></svg>
         </div>
         <h3>Desktop RE</h3>
-        <p>Static &amp; dynamic reverse engineering of Windows, macOS and Linux binaries. Anti-tamper, licensing &amp; protection bypass, malware-grade analysis.</p>
+        <p data-i18n="serv.c1.p">Reverse engineering statico &amp; dinamico di binari Windows, macOS e Linux. Anti-tamper, bypass di licenze &amp; protezioni, analisi in stile malware.</p>
         <ul class="tags"><li>Ghidra</li><li>IDA</li><li>x64dbg</li><li>Frida</li></ul>
       </article>
       <article class="card">
@@ -81,7 +95,7 @@
           <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
         </div>
         <h3>Mobile RE</h3>
-        <p>Android &amp; iOS deep teardown — root/jailbreak &amp; SSL-pinning bypass, IPC abuse, insecure storage, runtime instrumentation per OWASP MASTG.</p>
+        <p data-i18n="serv.c2.p">Teardown profondo di Android &amp; iOS — bypass di root/jailbreak &amp; SSL pinning, abuso IPC, storage insicuro, instrumentation a runtime secondo OWASP MASTG.</p>
         <ul class="tags"><li>jadx</li><li>apktool</li><li>Frida</li><li>Objection</li></ul>
       </article>
       <article class="card">
@@ -89,7 +103,7 @@
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18 M12 3c3 3 3 15 0 18 M12 3c-3 3-3 15 0 18"/></svg>
         </div>
         <h3>Web Pentest</h3>
-        <p>OWASP Top 10 &amp; business-logic abuse. Auth/authz bypass, every injection class, chained exploitation to prove real-world impact.</p>
+        <p data-i18n="serv.c3.p">OWASP Top 10 &amp; abusi di business logic. Bypass di autenticazione/autorizzazione, ogni classe di injection, exploitation concatenata per provare l’impatto reale.</p>
         <ul class="tags"><li>Burp</li><li>SQLi</li><li>XSS</li><li>SSTI</li></ul>
       </article>
       <article class="card">
@@ -97,7 +111,7 @@
           <svg viewBox="0 0 24 24"><path d="M4 7h16 M4 12h16 M4 17h16 M8 4v16 M16 4v16"/></svg>
         </div>
         <h3>API Pentest</h3>
-        <p>REST, GraphQL &amp; SOAP. JWT/OAuth flaws, broken object-level auth, mass assignment, rate-limit &amp; abuse testing against your contracts.</p>
+        <p data-i18n="serv.c4.p">REST, GraphQL &amp; SOAP. Falle JWT/OAuth, broken object-level auth, mass assignment, test di rate-limit &amp; abuso sui tuoi contratti.</p>
         <ul class="tags"><li>JWT</li><li>GraphQL</li><li>BOLA</li><li>OAuth</li></ul>
       </article>
     </div>
@@ -106,9 +120,9 @@
   <!-- ░░ ARSENAL ░░ -->
   <section class="section" id="arsenal">
     <div class="section-head">
-      <span class="kicker">// Arsenal</span>
-      <h2>Tooling forged for the hunt</h2>
-      <p>Battle-tested instruments plus in-house automation.</p>
+      <span class="kicker" data-i18n="ars.kicker">// Arsenale</span>
+      <h2 data-i18n="ars.h2">Strumenti forgiati per la caccia</h2>
+      <p data-i18n="ars.p">Strumenti collaudati sul campo, più automazione interna.</p>
     </div>
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
@@ -117,60 +131,58 @@
       </div>
     </div>
     <div class="arsenal-cta">
-      <a href="portfolio.html" class="btn btn-ghost">See What We Build</a>
+      <a href="portfolio.html" class="btn btn-ghost" data-i18n="ars.cta">Guarda cosa costruisco</a>
     </div>
   </section>
 
   <!-- ░░ METHODOLOGY ░░ -->
   <section class="section" id="method">
     <div class="section-head">
-      <span class="kicker">// Methodology</span>
-      <h2>How we scry</h2>
-      <p>Disciplined, scoped, evidence-driven — aligned to OWASP, MASVS &amp; NIST 800-115.</p>
+      <span class="kicker" data-i18n="met.kicker">// Metodologia</span>
+      <h2 data-i18n="met.h2">Come scruto</h2>
+      <p data-i18n="met.p">Disciplinata, con scope definito, guidata dalle evidenze — allineata a OWASP, MASVS &amp; NIST 800-115.</p>
     </div>
     <ol class="timeline">
       <li>
         <span class="tl-no">01</span>
-        <h3>Recon &amp; Scoping</h3>
-        <p>Define rules of engagement, map the attack surface, enumerate every reachable component.</p>
+        <h3 data-i18n="met.s1.h">Recon &amp; scoping</h3>
+        <p data-i18n="met.s1.p">Definizione delle regole d’ingaggio, mappatura della superficie d’attacco, enumerazione di ogni componente raggiungibile.</p>
       </li>
       <li>
         <span class="tl-no">02</span>
-        <h3>Analysis &amp; RE</h3>
-        <p>Decompile, instrument and fuzz. Understand the target from the inside out.</p>
+        <h3 data-i18n="met.s2.h">Analisi &amp; RE</h3>
+        <p data-i18n="met.s2.p">Decompilazione, instrumentation e fuzzing. Il target compreso dall’interno.</p>
       </li>
       <li>
         <span class="tl-no">03</span>
-        <h3>Exploitation</h3>
-        <p>Weaponize findings into reliable proof-of-concepts that demonstrate true impact.</p>
+        <h3 data-i18n="met.s3.h">Exploitation</h3>
+        <p data-i18n="met.s3.p">Finding trasformati in proof-of-concept affidabili che dimostrano l’impatto reale.</p>
       </li>
       <li>
         <span class="tl-no">04</span>
-        <h3>Report &amp; Remediate</h3>
-        <p>CVSS-scored findings, reproduction steps and remediation guidance. Re-test on fix.</p>
+        <h3 data-i18n="met.s4.h">Report &amp; remediation</h3>
+        <p data-i18n="met.s4.p">Finding con score CVSS, passi di riproduzione e guida alla remediation. Re-test alla fix.</p>
       </li>
     </ol>
   </section>
 
-  <!-- ░░ OPERATORS ░░ -->
-  <section class="section" id="operators">
+  <!-- ░░ ABOUT ░░ -->
+  <section class="section" id="about">
     <div class="section-head">
-      <span class="kicker">// Operators</span>
-      <h2>The eyes in the dark</h2>
-      <p>A tight cell of specialists. Handles only — for obvious reasons.</p>
+      <span class="kicker" data-i18n="about.kicker">// Chi sono</span>
+      <h2 data-i18n="about.h2">Chi c’è dietro NightSCRY</h2>
+      <p data-i18n="about.intro">Il professionista dietro gli ingaggi.</p>
     </div>
-    <div class="cards ops">
-      <article class="op">
-        <div class="op-avatar" data-tag="FULL"><img src="https://github.com/doggoAngel.png" alt="doggoAngel" /></div>
-        <h3>doggoAngel</h3>
-        <span class="op-role">Full-Spectrum Operator</span>
-        <p>Web, API, mobile and desktop pentesting, plus reverse engineering.</p>
-      </article>
-      <article class="op">
-        <div class="op-avatar" data-tag="RE"><img src="https://github.com/mariettone.png" alt="mariettone" /></div>
-        <h3>mariettone</h3>
-        <span class="op-role">Reverse Engineer</span>
-        <p>Reverse engineering across desktop and mobile targets.</p>
+    <div class="about-wrap">
+      <article class="op about-card">
+        <div class="op-avatar" data-tag="PT · RE">RS</div>
+        <h3>Roberto Gianfranco Savi</h3>
+        <span class="op-role" data-i18n="about.role">Penetration Tester &amp; Reverse Engineer</span>
+        <p data-i18n="about.bio">Con esperienza di penetration testing su sistemi bancari (web application, API). Reverse engineering su desktop e mobile.</p>
+        <a class="social-link about-link" href="https://www.linkedin.com/in/roberto-g-savi-965b9a2a2/" target="_blank" rel="noopener noreferrer" aria-label="Roberto Savi su LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.24 8.25h4.47V24H.24V8.25zM8.34 8.25h4.29v2.15h.06c.6-1.13 2.06-2.32 4.24-2.32 4.53 0 5.37 2.98 5.37 6.86V24h-4.47v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.34V8.25z"/></svg>
+          <span>LinkedIn</span>
+        </a>
       </article>
     </div>
   </section>
@@ -179,35 +191,35 @@
   <section class="section contact" id="contact">
     <div class="contact-panel">
       <div class="section-head left">
-        <span class="kicker">// Engage</span>
-        <h2>Point us at a target.</h2>
-        <p>Authorized engagements only. Tell us the scope — we'll tell you where it breaks.</p>
+        <span class="kicker" data-i18n="con.kicker">// Ingaggia</span>
+        <h2 data-i18n="con.h2">Puntami su un target.</h2>
+        <p data-i18n="con.p">Solo ingaggi autorizzati. Dimmi lo scope — ti dirò dove si rompe.</p>
       </div>
       <form class="form" id="engageForm" novalidate>
         <div class="field">
-          <label for="org">Organization</label>
-          <input id="org" name="org" type="text" placeholder="ACME Corp" required />
+          <label for="org" data-i18n="lbl.org">Organizzazione</label>
+          <input id="org" name="org" type="text" placeholder="ACME S.p.A." data-i18n-ph="ph.org" required />
         </div>
         <div class="field">
-          <label for="email">Contact email</label>
+          <label for="email" data-i18n="lbl.email">Email di contatto</label>
           <input id="email" name="email" type="email" placeholder="security@acme.com" required />
         </div>
         <div class="field">
-          <label for="scope">Engagement type</label>
+          <label for="scope" data-i18n="lbl.scope">Tipo di ingaggio</label>
           <select id="scope" name="scope">
-            <option>Desktop Reverse Engineering</option>
-            <option>Mobile Reverse Engineering</option>
-            <option>Web Application Pentest</option>
-            <option>API Pentest</option>
-            <option>Full-spectrum / Red Team</option>
+            <option data-i18n="opt.desktop">Reverse Engineering Desktop</option>
+            <option data-i18n="opt.mobile">Reverse Engineering Mobile</option>
+            <option data-i18n="opt.web">Pentest Web Application</option>
+            <option data-i18n="opt.api">Pentest API</option>
+            <option data-i18n="opt.full">Spettro completo / Red Team</option>
           </select>
         </div>
         <div class="field">
-          <label for="brief">Brief</label>
-          <textarea id="brief" name="brief" rows="4" placeholder="Targets, scope, timeline, authorization details..."></textarea>
+          <label for="brief" data-i18n="lbl.brief">Brief</label>
+          <textarea id="brief" name="brief" rows="4" placeholder="Target, scope, tempistiche, dettagli di autorizzazione…" data-i18n-ph="ph.brief"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary full">Transmit Request</button>
-        <p class="form-note" id="formNote" hidden>◉ Opening your email client — send the pre-filled message to reach us.</p>
+        <button type="submit" class="btn btn-primary full" data-i18n="btn.submit">Trasmetti richiesta</button>
+        <p class="form-note" id="formNote" data-i18n="form.note" hidden>◉ Apertura del client email — invia il messaggio precompilato per contattarci.</p>
       </form>
     </div>
   </section>
@@ -219,11 +231,13 @@
     <span class="brand-mark sm" id="footLogo"></span>
     <span>NIGHT<span class="accent">SCRY</span> TEAM</span>
   </div>
-  <p class="footer-tag"><span class="br">[</span><span class="footer-tag-txt">SEE&nbsp;EVERYTHING. EXPLOIT&nbsp;WEAKNESS.</span><span class="br">]</span></p>
-  <p class="footer-fine">Offensive security collective · Authorized testing only · © <span id="yr"></span></p>
+  <p class="footer-tag"><span class="br">[</span><span class="footer-tag-txt" data-i18n="footer.tag">VEDI&nbsp;TUTTO. SFRUTTA&nbsp;OGNI&nbsp;DEBOLEZZA.</span><span class="br">]</span></p>
+  <p class="footer-legal">Roberto Gianfranco Savi · P.IVA 04930840162 · <a href="mailto:nightscry.team@outlook.com">nightscry.team@outlook.com</a></p>
+  <p class="footer-fine"><span data-i18n="footer.fine">Offensive security · Solo test autorizzati · © </span><span id="yr"></span></p>
 </footer>
 
 <script src="logo.js"></script>
 <script src="script.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>
