@@ -1,4 +1,4 @@
-['navLogo', 'heroLogo', 'footLogo'].forEach((id) => {
+['navLogo', 'heroLogo', 'footLogo', 'consoleLogo'].forEach((id) => {
   const el = document.getElementById(id);
   if (el && window.NightSCRYLogo) el.innerHTML = window.NightSCRYLogo(id);
 });
@@ -24,7 +24,7 @@ const io = new IntersectionObserver(
   (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('in')),
   { threshold: 0.15 }
 );
-document.querySelectorAll('.section, .card, .op, .timeline li').forEach((el) => {
+document.querySelectorAll('.section, .card, .bcard, .op, .timeline li, .why-item, .res-card, .feature, .console').forEach((el) => {
   el.classList.add('reveal');
   io.observe(el);
 });
@@ -45,31 +45,6 @@ const statIO = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.6 });
 document.querySelectorAll('.hero-stats b').forEach((b) => statIO.observe(b));
-
-document.getElementById('engageForm')?.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const TEAM_EMAIL = 'nightscry.team@outlook.com';
-
-  const org   = document.getElementById('org').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const scope = document.getElementById('scope').value;
-  const brief = document.getElementById('brief').value.trim();
-
-  const subject = encodeURIComponent(`[Engagement] ${scope} — ${org}`);
-  const body = encodeURIComponent(
-    `Organization: ${org}\n` +
-    `Contact email: ${email}\n` +
-    `Engagement type: ${scope}\n\n` +
-    `Brief:\n${brief}\n`
-  );
-
-  window.location.href = `mailto:${TEAM_EMAIL}?subject=${subject}&body=${body}`;
-
-  const note = document.getElementById('formNote');
-  note.hidden = false;
-  e.target.reset();
-});
 
 (function matrix() {
   const c = document.getElementById('matrix');

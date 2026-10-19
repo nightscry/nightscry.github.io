@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title data-i18n-title="title.index">NightSCRY Team — Vedi tutto. Sfrutta ogni debolezza.</title>
-<meta name="description" data-i18n-content="meta.index" content="NightSCRY Team — offensive security. Reverse engineering su software desktop e mobile, penetration testing web e API." />
+<title data-i18n-title="title.index">NightSCRY — Vedi tutto. Sfrutta ogni debolezza.</title>
+<meta name="description" data-i18n-content="meta.index" content="NightSCRY — ricerca indipendente in sicurezza informatica. Reverse engineering, vulnerability research e OSINT, pubblicati in chiaro." />
 <link rel="icon" type="image/webp" href="logo.webp" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- ░░ Animated background layers ░░ -->
 <div class="bg-grid" aria-hidden="true"></div>
 <div class="bg-glow" aria-hidden="true"></div>
 <canvas id="matrix" aria-hidden="true"></canvas>
@@ -25,14 +24,14 @@
     <span class="brand-text">NIGHT<span class="accent">SCRY</span></span>
   </a>
   <nav class="nav-links" aria-label="Primary">
-    <a href="#services" data-i18n="nav.services">Servizi</a>
-    <a href="#arsenal" data-i18n="nav.arsenal">Arsenale</a>
-    <a href="portfolio.html" class="nav-hot" data-i18n="nav.projects">Progetti</a>
-    <a href="#method" data-i18n="nav.method">Metodologia</a>
+    <a href="#research" data-i18n="nav.research">Ricerca</a>
+    <a href="#areas" data-i18n="nav.areas">Aree</a>
+    <a href="#method" data-i18n="nav.method">Metodo</a>
+    <a href="portfolio.html" data-i18n="nav.projects">Progetti</a>
     <a href="#about" data-i18n="nav.about">Chi sono</a>
-    <a href="#contact" class="nav-cta" data-i18n="nav.engage">Ingaggia</a>
+    <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contatti</a>
   </nav>
-  <a class="nav-social" href="https://www.linkedin.com/company/nightscry-team/" target="_blank" rel="noopener noreferrer" aria-label="NightSCRY Team su LinkedIn">
+  <a class="nav-social" href="https://www.linkedin.com/company/nightscry-team/" target="_blank" rel="noopener noreferrer" aria-label="NightSCRY su LinkedIn">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.24 8.25h4.47V24H.24V8.25zM8.34 8.25h4.29v2.15h.06c.6-1.13 2.06-2.32 4.24-2.32 4.53 0 5.37 2.98 5.37 6.86V24h-4.47v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.34V8.25z"/></svg>
   </a>
   <button class="lang-btn" id="langToggle" type="button" aria-label="Switch to English">EN</button>
@@ -45,195 +44,405 @@
 
   <!-- ░░ HERO ░░ -->
   <section class="hero">
-    <div class="hero-logo" id="heroLogo"></div>
-    <h1 class="hero-title">NIGHT<span class="accent">SCRY</span><span class="cursor">_</span></h1>
-    <p class="hero-tag"><span class="br">[</span><span class="hero-tag-txt" data-i18n="hero.tag">VEDI&nbsp;TUTTO. <span class="accent">SFRUTTA&nbsp;OGNI&nbsp;DEBOLEZZA.</span></span><span class="br">]</span></p>
-    <p class="hero-sub" data-i18n="hero.sub">
-      Offensive security su misura. Reverse engineering di binari desktop &amp; mobile e attacchi ad
-      applicazioni web &amp; API — prima che lo faccia l’avversario.
-    </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Richiedi un ingaggio</a>
-      <a href="#services" class="btn btn-ghost" data-i18n="hero.cta2">Vedi le capacità</a>
+    <div class="hero-copy">
+      <span class="kicker" data-i18n="hero.kicker">Independent Security Research</span>
+      <h1 class="hero-title" data-i18n="hero.h1">VEDI TUTTO.<br /><span class="accent">SFRUTTA OGNI DEBOLEZZA.</span></h1>
+      <p class="hero-sub" data-i18n="hero.sub">Laboratorio indipendente di ricerca in sicurezza informatica. Reverse engineering, vulnerability research e OSINT — studio come si rompono i sistemi e pubblico tutto in chiaro.</p>
+      <div class="hero-actions">
+        <a href="#research" class="btn btn-primary" data-i18n="hero.cta1">Leggi la ricerca</a>
+        <a href="portfolio.html" class="btn btn-ghost" data-i18n="hero.cta2">Esplora i progetti</a>
+      </div>
+      <ul class="hero-stats">
+        <li><b data-count="2">0</b><span data-i18n="stat.pub">Pubblicazioni rilasciate</span></li>
+        <li><b data-count="36">0</b><span data-i18n="stat.exposed">Installazioni esposte identificate</span></li>
+        <li><b data-count="3">0</b><span data-i18n="stat.conn">Connettori keyless in EyeTrace</span></li>
+        <li><b data-count="0">0</b><span data-i18n="stat.data">Dati di terzi toccati</span></li>
+      </ul>
     </div>
-    <ul class="hero-stats">
-      <li><b data-count="4">0</b><span data-i18n="stat.surfaces">Superfici d’attacco coperte</span></li>
-      <li><b data-count="9">0</b><span data-i18n="stat.severity">/10 finding di severità massima</span></li>
-      <li><b data-count="2">0</b><span data-i18n="stat.re">Software analizzati in reverse</span></li>
-      <li><b data-count="100">0</b><span data-i18n="stat.scope">% di scope autorizzato</span></li>
-    </ul>
+
+    <div class="hero-visual" aria-hidden="true">
+      <svg class="hud" viewBox="0 0 600 600">
+        <g class="hud-traces">
+          <path d="M600 90 H470 L420 140 H360" />
+          <path d="M600 150 H500 L465 185" />
+          <path d="M0 470 H90 L140 420 H200" />
+          <path d="M600 500 H520 L470 450 H420" />
+          <path d="M40 120 H110 L150 160" />
+          <circle cx="360" cy="140" r="3" /><circle cx="465" cy="185" r="3" />
+          <circle cx="200" cy="420" r="3" /><circle cx="420" cy="450" r="3" />
+          <circle cx="150" cy="160" r="3" />
+        </g>
+        <circle class="hud-ring r1" cx="300" cy="300" r="270" />
+        <circle class="hud-ring r2" cx="300" cy="300" r="230" />
+        <circle class="hud-ring r3" cx="300" cy="300" r="196" />
+        <g class="hud-spin">
+          <path class="hud-arc" d="M300 70 A230 230 0 0 1 512 210" />
+          <path class="hud-arc" d="M300 530 A230 230 0 0 1 88 390" />
+        </g>
+        <g class="hud-spin rev"><circle class="hud-ticks" cx="300" cy="300" r="250" /></g>
+      </svg>
+      <div class="hero-logo" id="heroLogo"></div>
+    </div>
   </section>
 
-  <!-- ░░ PORTFOLIO SPOTLIGHT ░░ -->
-  <section class="section spotlight" id="portfolio">
-    <div class="spotlight-inner">
-      <span class="kicker" data-i18n="spot.kicker">// Portfolio</span>
-      <h2 data-i18n="spot.h2">In prima linea: i progetti rilasciati.</h2>
-      <p data-i18n="spot.p">Strumenti offensivi, vulnerability research e indagini OSINT — sviluppati in proprio e rilasciati in chiaro.</p>
-      <a href="portfolio.html" class="btn btn-primary" data-i18n="spot.btn">Esplora il portfolio</a>
-    </div>
-  </section>
-
-  <!-- ░░ SERVICES ░░ -->
-  <section class="section" id="services">
+  <!-- ░░ LATEST RESEARCH ░░ -->
+  <section class="section" id="research">
     <div class="section-head">
-      <span class="kicker" data-i18n="serv.kicker">// Capacità</span>
-      <h2 data-i18n="serv.h2">Quattro fronti. Un occhio che non si chiude.</h2>
-      <p data-i18n="serv.p">Copertura offensiva a spettro completo sulle superfici che contano.</p>
+      <span class="kicker" data-i18n="res.kicker">Ultime ricerche</span>
+      <h2 data-i18n="res.h2">Ricerca che rafforza <span class="accent">le difese di tutti.</span></h2>
+      <p data-i18n="res.p">Studio il comportamento degli attaccanti e le debolezze dei sistemi reali — poi rilascio strumenti e report in chiaro.</p>
     </div>
-    <div class="cards">
-      <article class="card">
-        <div class="card-ico">
-          <svg viewBox="0 0 24 24"><path d="M4 5h16v10H4z M2 19h20 M8 19v-2 M16 19v-2" /></svg>
+
+    <a class="feature" href="pdf/Italian_Cybersecurity_-_Nightscry_OSINT_Report.pdf" target="_blank" rel="noopener noreferrer">
+      <div class="feature-shot"><img src="assets/cover-italian-cybersecurity.png" width="800" height="588" loading="lazy" decoding="async" alt="Copertina del report OSINT Italian Cybersecurity di NightSCRY." /></div>
+      <div class="feature-body">
+        <span class="res-tag" data-i18n="tag.ita">REPORT · OSINT · SQLi</span>
+        <h3>Italian Cybersecurity</h3>
+        <p class="feature-line" data-i18n="ita.line">La cybersecurity italiana è un’altra cosa.</p>
+        <p data-i18n="feat.ita">Un apostrofo inviato a una web application ha restituito un SQL ERROR. Censys ha poi mostrato lo stesso software su 36 installazioni esposte. Nessun exploit, nessun dato toccato: mi sono fermato all’errore e ho documentato tutto.</p>
+        <ul class="feature-facts">
+          <li><b>36</b><span data-i18n="feat.f1">installazioni esposte</span></li>
+          <li><b>1</b><span data-i18n="feat.f2">apostrofo</span></li>
+          <li><b>0</b><span data-i18n="feat.f3">dati toccati</span></li>
+        </ul>
+        <span class="pill pill-light"><span data-i18n="res.pdf">Leggi il report</span><i class="chev"></i></span>
+      </div>
+    </a>
+
+    <div class="res-grid">
+      <a class="res-card" href="https://github.com/nightscry/EyeTrace" target="_blank" rel="noopener noreferrer">
+        <div class="res-shot"><img src="assets/eyetrace-graph.webp" width="800" height="588" loading="lazy" decoding="async" alt="EyeTrace: grafo force-directed delle controparti di un wallet Bitcoin." /></div>
+        <div class="res-body">
+          <span class="res-tag" data-i18n="tag.eye">TOOL · BLOCKCHAIN OSINT · BETA</span>
+          <h3>EyeTrace</h3>
+          <p data-i18n="feat.eye">Tracer multi-chain di wallet: riconosce la chain dal solo indirizzo tramite checksum crittografico e mappa le controparti come grafo interattivo.</p>
+          <span class="res-more"><span data-i18n="res.gh">Sorgente su GitHub</span> →</span>
         </div>
-        <h3>Desktop RE</h3>
-        <p data-i18n="serv.c1.p">Reverse engineering statico &amp; dinamico di binari Windows, macOS e Linux. Anti-tamper, bypass di licenze &amp; protezioni, analisi in stile malware.</p>
-        <ul class="tags"><li>Ghidra</li><li>IDA</li><li>x64dbg</li><li>Frida</li></ul>
-      </article>
-      <article class="card">
-        <div class="card-ico">
-          <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+      </a>
+      <a class="res-card res-soon" href="#lab">
+        <div class="soon-ill" aria-hidden="true">
+          <span class="soon-ring"></span><span class="soon-ring two"></span>
+          <span class="soon-core">&lt;/&gt;</span>
         </div>
-        <h3>Mobile RE</h3>
-        <p data-i18n="serv.c2.p">Teardown profondo di Android &amp; iOS — bypass di root/jailbreak &amp; SSL pinning, abuso IPC, storage insicuro, instrumentation a runtime secondo OWASP MASTG.</p>
-        <ul class="tags"><li>jadx</li><li>apktool</li><li>Frida</li><li>Objection</li></ul>
-      </article>
-      <article class="card">
-        <div class="card-ico">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18 M12 3c3 3 3 15 0 18 M12 3c-3 3-3 15 0 18"/></svg>
+        <div class="res-body">
+          <span class="res-tag" data-i18n="tag.soon">WORK IN PROGRESS · OSINT</span>
+          <h3>OSINT Recon Dashboard</h3>
+          <p data-i18n="soon.p">Ricognizione passiva su un dominio: subdomain enumeration, servizi esposti, fingerprinting e leak da fonti pubbliche, aggregati in un report.</p>
+          <span class="res-more"><span data-i18n="soon.cta">Guarda l’anteprima</span> ↓</span>
         </div>
-        <h3>Web Pentest</h3>
-        <p data-i18n="serv.c3.p">OWASP Top 10 &amp; abusi di business logic. Bypass di autenticazione/autorizzazione, ogni classe di injection, exploitation concatenata per provare l’impatto reale.</p>
-        <ul class="tags"><li>Burp</li><li>SQLi</li><li>XSS</li><li>SSTI</li></ul>
-      </article>
-      <article class="card">
-        <div class="card-ico">
-          <svg viewBox="0 0 24 24"><path d="M4 7h16 M4 12h16 M4 17h16 M8 4v16 M16 4v16"/></svg>
-        </div>
-        <h3>API Pentest</h3>
-        <p data-i18n="serv.c4.p">REST, GraphQL &amp; SOAP. Falle JWT/OAuth, broken object-level auth, mass assignment, test di rate-limit &amp; abuso sui tuoi contratti.</p>
-        <ul class="tags"><li>JWT</li><li>GraphQL</li><li>BOLA</li><li>OAuth</li></ul>
-      </article>
+      </a>
     </div>
   </section>
 
-  <!-- ░░ ARSENAL ░░ -->
-  <section class="section" id="arsenal">
+  <!-- ░░ LAB: OSINT recon dashboard preview ░░ -->
+  <section class="section lab" id="lab">
     <div class="section-head">
-      <span class="kicker" data-i18n="ars.kicker">// Arsenale</span>
-      <h2 data-i18n="ars.h2">Strumenti forgiati per la caccia</h2>
-      <p data-i18n="ars.p">Strumenti collaudati sul campo, più automazione interna.</p>
+      <span class="kicker" data-i18n="lab.kicker">In laboratorio</span>
+      <h2 data-i18n="lab.h2">OSINT Recon Dashboard. <span class="accent">In sviluppo.</span></h2>
+      <p data-i18n="lab.p">Dato un dominio target: subdomain enumeration da Certificate Transparency e DNS, servizi esposti via Censys/Shodan, fingerprinting tecnologico, software EOL e leak — tutto passivo, tutto aggregato in un report.</p>
     </div>
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>GHIDRA</span><span>IDA PRO</span><span>BINARY NINJA</span><span>FRIDA</span><span>BURP SUITE</span><span>METASPLOIT</span><span>RADARE2</span><span>JADX</span><span>SQLMAP</span><span>WIRESHARK</span><span>AFL++</span><span>SEMGREP</span>
-        <span>GHIDRA</span><span>IDA PRO</span><span>BINARY NINJA</span><span>FRIDA</span><span>BURP SUITE</span><span>METASPLOIT</span><span>RADARE2</span><span>JADX</span><span>SQLMAP</span><span>WIRESHARK</span><span>AFL++</span><span>SEMGREP</span>
+
+    <div class="console" aria-label="Anteprima illustrativa della OSINT Recon Dashboard">
+      <div class="console-bar"><span></span><span></span><span></span><em>recon.nightscry.local</em></div>
+      <div class="console-body">
+        <aside class="c-side">
+          <div class="c-brand"><span class="brand-mark xs" id="consoleLogo"></span><b>NightSCRY</b><small>Recon</small></div>
+          <div class="c-scope">◎ example-corp.it <i class="chev down"></i></div>
+          <ul class="c-nav">
+            <li class="on">▦ Overview <span>5</span></li>
+            <li>◇ Assets</li>
+            <li class="sub">Subdomains</li>
+            <li class="sub">IP / ASN</li>
+            <li class="sub">Certificates</li>
+            <li>⌖ Exposed services</li>
+            <li>⚙ Tech fingerprint</li>
+            <li>⚠ Leaks</li>
+            <li>⎙ Report</li>
+          </ul>
+          <div class="c-status"><span class="dot"></span> Passive only</div>
+        </aside>
+        <div class="c-main">
+          <div class="c-head">
+            <div><b>Overview</b><small data-i18n="console.sub">Dati illustrativi · example-corp.it</small></div>
+            <div class="c-tabs"><span>Recon</span><span class="on">Analysis</span><span>Report</span></div>
+          </div>
+          <div class="c-tiles">
+            <div><small>Subdomains</small><b>214</b><em>crt.sh · DNS</em></div>
+            <div><small>Exposed services</small><b class="high">37</b><em>Censys · Shodan</em></div>
+            <div><small>Outdated software</small><b class="crit">9</b><em>EOL / CVE</em></div>
+            <div><small>Leaked accounts</small><b class="high">12</b><em>count only</em></div>
+            <div><small>Risk score</small><b>7.8</b><em>/ 10</em></div>
+          </div>
+          <div class="c-grid">
+            <div class="c-chart">
+              <div class="c-chart-head"><span class="on">Assets discovered</span><span>By source</span><em><i class="lg a"></i>Assets <i class="lg b"></i>Findings</em></div>
+              <svg viewBox="0 0 520 190" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a855f7" stop-opacity=".55"/><stop offset="1" stop-color="#a855f7" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="cg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f59e0b" stop-opacity=".5"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></linearGradient>
+                </defs>
+                <g class="c-gridlines"><path d="M0 40H520M0 85H520M0 130H520M0 175H520"/></g>
+                <path d="M0 180 C40 175 60 150 90 130 S140 110 170 90 S220 85 250 70 S300 50 330 48 S390 40 420 35 S480 30 520 28 V190 H0Z" fill="url(#cg)"/>
+                <path class="c-line" d="M0 180 C40 175 60 150 90 130 S140 110 170 90 S220 85 250 70 S300 50 330 48 S390 40 420 35 S480 30 520 28"/>
+                <path d="M0 186 C60 184 90 178 130 170 S190 160 230 150 S300 140 340 132 S420 128 520 120 V190 H0Z" fill="url(#cg2)"/>
+                <path class="c-line amber" d="M0 186 C60 184 90 178 130 170 S190 160 230 150 S300 140 340 132 S420 128 520 120"/>
+              </svg>
+              <div class="c-axis"><span>crt.sh</span><span>DNS</span><span>WHOIS</span><span>Censys</span><span>Shodan</span><span>GitHub</span><span>Leaks</span></div>
+            </div>
+            <div class="c-list">
+              <div class="c-list-head">Top findings <small>Severity</small></div>
+              <ul>
+                <li><span class="sev crit">CRIT</span><p>RDP esposto<br /><code>203.0.113.24:3389</code></p><b>9.0</b></li>
+                <li><span class="sev high">HIGH</span><p>Apache 2.4.29 (EOL)<br /><code>vpn.example-corp.it</code></p><b>8.8</b></li>
+                <li><span class="sev high">HIGH</span><p>Admin panel pubblico<br /><code>admin.example-corp.it</code></p><b>7.5</b></li>
+                <li><span class="sev high">HIGH</span><p>12 account in data breach<br /><code>@example-corp.it</code></p><b>7.0</b></li>
+                <li><span class="sev med">MED</span><p>Bucket S3 listabile<br /><code>static-example-corp</code></p><b>5.3</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="arsenal-cta">
-      <a href="portfolio.html" class="btn btn-ghost" data-i18n="ars.cta">Guarda cosa costruisco</a>
-    </div>
+    <p class="console-cap" data-i18n="console.cap">Anteprima illustrativa: dominio e dati sono di esempio. Solo fonti pubbliche, nessuna scansione attiva.</p>
   </section>
 
-  <!-- ░░ METHODOLOGY ░░ -->
+  <!-- ░░ RESEARCH AREAS (light band, bento) ░░ -->
+  <div class="band-light">
+    <section class="section" id="areas">
+      <div class="section-head">
+        <span class="kicker" data-i18n="areas.kicker">Aree di ricerca</span>
+        <h2 data-i18n="areas.h2">Quattro fronti. <span class="accent">Un occhio che non si chiude.</span></h2>
+        <p data-i18n="areas.p">Le superfici su cui concentro la ricerca.</p>
+      </div>
+      <div class="bento">
+        <article class="bcard b-wide">
+          <div class="ill">
+            <svg viewBox="0 0 460 210">
+              <rect class="i-box" x="20" y="30" width="170" height="150" rx="8"/>
+              <circle class="i-dim" cx="36" cy="44" r="3"/><circle class="i-dim" cx="46" cy="44" r="3"/><circle class="i-dim" cx="56" cy="44" r="3"/>
+              <text class="i-mono" x="34" y="74">push  rbp</text>
+              <text class="i-mono" x="34" y="94">mov   rbp, rsp</text>
+              <text class="i-mono hi" x="34" y="114">call  check_lic</text>
+              <text class="i-mono" x="34" y="134">test  eax, eax</text>
+              <text class="i-mono" x="34" y="154">jz    0x4012A0</text>
+              <rect class="i-hl" x="28" y="102" width="154" height="17" rx="3"/>
+              <path class="i-wire" d="M190 110 H260"/>
+              <circle class="i-node hot" cx="290" cy="110" r="26"/>
+              <path class="i-glyph" d="M280 104 l10 -8 l10 8 M282 116 h16"/>
+              <path class="i-wire dash" d="M316 110 H360 M360 110 L390 70 M360 110 L390 150"/>
+              <rect class="i-chip" x="390" y="56" width="58" height="26" rx="13"/><text class="i-lbl" x="419" y="73">Frida</text>
+              <rect class="i-chip" x="390" y="137" width="58" height="26" rx="13"/><text class="i-lbl" x="419" y="154">Ghidra</text>
+              <text class="i-tag" x="290" y="160">hook()</text>
+            </svg>
+          </div>
+          <h3 data-i18n="area.c1.h">Desktop Reverse Engineering</h3>
+          <p data-i18n="area.c1.p">Analisi statica &amp; dinamica di binari Windows, macOS e Linux: meccanismi anti-tamper, protezioni, licensing e comportamento in stile malware.</p>
+          <div class="bfoot"><ul class="tags"><li>Ghidra</li><li>IDA</li><li>x64dbg</li><li>Frida</li></ul></div>
+        </article>
+
+        <article class="bcard">
+          <div class="ill">
+            <svg viewBox="0 0 300 210">
+              <rect class="i-box" x="118" y="30" width="64" height="120" rx="12"/>
+              <rect class="i-dim-rect" x="140" y="138" width="20" height="4" rx="2"/>
+              <circle class="i-node hot" cx="150" cy="86" r="18"/>
+              <path class="i-glyph" d="M143 86 h14 M150 79 v14"/>
+              <path class="i-wire dash" d="M118 70 H70 M182 70 H230 M150 150 V176"/>
+              <rect class="i-chip" x="12" y="57" width="60" height="26" rx="13"/><text class="i-lbl" x="42" y="74">Root</text>
+              <rect class="i-chip" x="228" y="57" width="60" height="26" rx="13"/><text class="i-lbl" x="258" y="74">Pinning</text>
+              <rect class="i-chip on" x="110" y="172" width="80" height="26" rx="13"/><text class="i-lbl on" x="150" y="189">instrumented</text>
+            </svg>
+          </div>
+          <h3 data-i18n="area.c2.h">Mobile Security</h3>
+          <p data-i18n="area.c2.p">Teardown di app Android &amp; iOS: root/jailbreak detection, SSL pinning, IPC, storage insicuro e instrumentation a runtime secondo OWASP MASTG.</p>
+          <div class="bfoot"><ul class="tags"><li>jadx</li><li>apktool</li><li>Objection</li></ul></div>
+        </article>
+
+        <article class="bcard">
+          <div class="ill">
+            <svg viewBox="0 0 300 210">
+              <rect class="i-box" x="20" y="28" width="260" height="40" rx="20"/>
+              <text class="i-mono" x="40" y="53">/search?q=test<tspan class="hi">'</tspan></text>
+              <path class="i-wire" d="M150 68 V108"/>
+              <ellipse class="i-box" cx="150" cy="120" rx="44" ry="12"/>
+              <path class="i-box" d="M106 120 V160 A44 12 0 0 0 194 160 V120"/>
+              <rect class="i-chip warn" x="196" y="160" width="92" height="26" rx="13"/><text class="i-lbl warn" x="242" y="177">SQL ERROR</text>
+            </svg>
+          </div>
+          <h3 data-i18n="area.c3.h">Web Vulnerability Research</h3>
+          <p data-i18n="area.c3.p">Classi di vulnerabilità web, injection e falle di business logic — studiate su software reale ed esposto, documentate senza sfruttarle.</p>
+          <div class="bfoot"><ul class="tags"><li>SQLi</li><li>XSS</li><li>SSTI</li><li>Censys</li></ul></div>
+        </article>
+
+        <article class="bcard b-wide">
+          <div class="ill">
+            <svg viewBox="0 0 460 210">
+              <circle class="i-node" cx="60" cy="105" r="22"/><text class="i-lbl" x="60" y="109">₿</text>
+              <text class="i-tag" x="60" y="150">bc1q…7gdp</text>
+              <path class="i-wire" d="M82 105 H150"/>
+              <rect class="i-box" x="150" y="62" width="160" height="86" rx="8"/>
+              <text class="i-mono" x="166" y="90">checksum: <tspan class="hi">Bech32</tspan></text>
+              <text class="i-mono" x="166" y="112">chain: bitcoin</text>
+              <text class="i-mono ok" x="166" y="134">42 counterparties</text>
+              <path class="i-wire dash" d="M310 105 H350 M350 105 L380 70 M350 105 L380 140 M350 105 H400"/>
+              <circle class="i-node" cx="388" cy="64" r="9"/><circle class="i-node hot" cx="414" cy="105" r="14"/><circle class="i-node" cx="388" cy="146" r="9"/>
+            </svg>
+          </div>
+          <h3 data-i18n="area.c4.h">OSINT &amp; Blockchain Intelligence</h3>
+          <p data-i18n="area.c4.p">Ricognizione da fonti aperte, mappatura di superfici esposte e tracciamento di transazioni on-chain — la base di EyeTrace e del report Italian Cybersecurity.</p>
+          <div class="bfoot"><ul class="tags"><li>Censys</li><li>Shodan</li><li>Bitcoin</li><li>EVM</li></ul></div>
+        </article>
+      </div>
+      <div class="center-cta"><a href="portfolio.html" class="pill pill-dark"><span data-i18n="hero.cta2">Esplora i progetti</span><i class="chev"></i></a></div>
+    </section>
+  </div>
+
+  <!-- ░░ METHOD ░░ -->
   <section class="section" id="method">
     <div class="section-head">
-      <span class="kicker" data-i18n="met.kicker">// Metodologia</span>
-      <h2 data-i18n="met.h2">Come scruto</h2>
-      <p data-i18n="met.p">Disciplinata, con scope definito, guidata dalle evidenze — allineata a OWASP, MASVS &amp; NIST 800-115.</p>
+      <span class="kicker" data-i18n="met.kicker">Il mio metodo</span>
+      <h2 data-i18n="met.h2">Metodo rigoroso. <span class="accent">Guidato dalla curiosità.</span></h2>
+      <p data-i18n="met.p">Ogni ricerca segue lo stesso percorso: osservare, capire, dimostrare, pubblicare in modo responsabile.</p>
     </div>
     <ol class="timeline">
       <li>
-        <span class="tl-no">01</span>
-        <h3 data-i18n="met.s1.h">Recon &amp; scoping</h3>
-        <p data-i18n="met.s1.p">Definizione delle regole d’ingaggio, mappatura della superficie d’attacco, enumerazione di ogni componente raggiungibile.</p>
+        <span class="tl-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></span>
+        <h3 data-i18n="met.s1.h">Osservazione &amp; OSINT</h3>
+        <p data-i18n="met.s1.p">Fonti aperte, motori come Censys e Shodan, mappatura di ciò che è esposto pubblicamente.</p>
       </li>
       <li>
-        <span class="tl-no">02</span>
+        <span class="tl-ico"><svg viewBox="0 0 24 24"><path d="m8 6-6 6 6 6 M16 6l6 6-6 6"/></svg></span>
         <h3 data-i18n="met.s2.h">Analisi &amp; RE</h3>
         <p data-i18n="met.s2.p">Decompilazione, instrumentation e fuzzing. Il target compreso dall’interno.</p>
       </li>
       <li>
-        <span class="tl-no">03</span>
-        <h3 data-i18n="met.s3.h">Exploitation</h3>
-        <p data-i18n="met.s3.p">Finding trasformati in proof-of-concept affidabili che dimostrano l’impatto reale.</p>
+        <span class="tl-ico"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+        <h3 data-i18n="met.s3.h">Proof of concept</h3>
+        <p data-i18n="met.s3.p">Dimostrare la debolezza nel modo minimo possibile — senza mai toccare dati di terzi.</p>
       </li>
       <li>
-        <span class="tl-no">04</span>
-        <h3 data-i18n="met.s4.h">Report &amp; remediation</h3>
-        <p data-i18n="met.s4.p">Finding con score CVSS, passi di riproduzione e guida alla remediation. Re-test alla fix.</p>
+        <span class="tl-ico"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z M14 2v6h6 M9 13h8 M9 17h6"/></svg></span>
+        <h3 data-i18n="met.s4.h">Disclosure &amp; pubblicazione</h3>
+        <p data-i18n="met.s4.p">Disclosure responsabile, poi report e tool rilasciati in chiaro per la community.</p>
       </li>
     </ol>
+  </section>
+
+  <!-- ░░ PRINCIPLES ░░ -->
+  <section class="section" id="why">
+    <div class="section-head">
+      <h2 data-i18n="why.h2">I miei principi</h2>
+    </div>
+    <div class="why-grid">
+      <article class="why-item">
+        <span class="why-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/></svg></span>
+        <h3 data-i18n="why.1.h">Ricerca indipendente</h3><p data-i18n="why.1.p">Nessun cliente da accontentare: seguo le domande interessanti, ovunque portino.</p>
+      </article>
+      <article class="why-item">
+        <span class="why-ico"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+        <h3 data-i18n="why.2.h">Etica prima di tutto</h3><p data-i18n="why.2.p">Mi fermo all’evidenza. Nessun dato di terzi toccato, disclosure responsabile.</p>
+      </article>
+      <article class="why-item">
+        <span class="why-ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></span>
+        <h3 data-i18n="why.3.h">Open by default</h3><p data-i18n="why.3.p">Tool e report pubblicati in chiaro, perché la conoscenza serve a chi difende.</p>
+      </article>
+      <article class="why-item">
+        <span class="why-ico"><svg viewBox="0 0 24 24"><path d="M9 2h6 M10 2v7L4 20h16L14 9V2 M7 15h10"/></svg></span>
+        <h3 data-i18n="why.4.h">Curiosità continua</h3><p data-i18n="why.4.p">Smontare, capire, documentare. Restare davanti alle minacce emergenti.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ░░ TOOLBOX ░░ -->
+  <section class="section stack" id="arsenal">
+    <p class="stack-head" data-i18n="ars.p">Il mio laboratorio: strumenti collaudati più automazione sviluppata in casa.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Ghidra</span><span>IDA Pro</span><span>Binary Ninja</span><span>Frida</span><span>Burp Suite</span><span>Censys</span><span>radare2</span><span>jadx</span><span>sqlmap</span><span>Wireshark</span><span>AFL++</span><span>Semgrep</span>
+        <span>Ghidra</span><span>IDA Pro</span><span>Binary Ninja</span><span>Frida</span><span>Burp Suite</span><span>Censys</span><span>radare2</span><span>jadx</span><span>sqlmap</span><span>Wireshark</span><span>AFL++</span><span>Semgrep</span>
+      </div>
+    </div>
   </section>
 
   <!-- ░░ ABOUT ░░ -->
   <section class="section" id="about">
     <div class="section-head">
-      <span class="kicker" data-i18n="about.kicker">// Chi sono</span>
-      <h2 data-i18n="about.h2">Chi c’è dietro NightSCRY</h2>
-      <p data-i18n="about.intro">Il professionista dietro gli ingaggi.</p>
+      <span class="kicker" data-i18n="about.kicker">Chi sono</span>
+      <h2 data-i18n="about.h2">Chi c’è dietro <span class="accent">NightSCRY</span></h2>
     </div>
     <div class="about-wrap">
       <article class="op about-card">
-        <div class="op-avatar" data-tag="PT · RE">RS</div>
-        <h3>Roberto Gianfranco Savi</h3>
-        <span class="op-role" data-i18n="about.role">Penetration Tester &amp; Reverse Engineer</span>
-        <p data-i18n="about.bio">Con esperienza di penetration testing su sistemi bancari (web application, API). Reverse engineering su desktop e mobile.</p>
-        <a class="social-link about-link" href="https://www.linkedin.com/in/roberto-g-savi-965b9a2a2/" target="_blank" rel="noopener noreferrer" aria-label="Roberto Savi su LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.24 8.25h4.47V24H.24V8.25zM8.34 8.25h4.29v2.15h.06c.6-1.13 2.06-2.32 4.24-2.32 4.53 0 5.37 2.98 5.37 6.86V24h-4.47v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.34V8.25z"/></svg>
-          <span>LinkedIn</span>
-        </a>
+        <div class="op-avatar" data-tag="RE · OSINT">RS</div>
+        <div class="about-body">
+          <h3>Roberto Gianfranco Savi</h3>
+          <span class="op-role" data-i18n="about.role">Security Researcher &amp; Reverse Engineer</span>
+          <p data-i18n="about.bio">Esperienza di penetration testing su sistemi bancari (web application, API). Reverse engineering su desktop e mobile, OSINT. NightSCRY è il mio laboratorio di ricerca.</p>
+          <a class="pill pill-dark" href="https://www.linkedin.com/in/roberto-g-savi-965b9a2a2/" target="_blank" rel="noopener noreferrer" aria-label="Roberto Savi su LinkedIn">
+            <svg class="pill-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.24 8.25h4.47V24H.24V8.25zM8.34 8.25h4.29v2.15h.06c.6-1.13 2.06-2.32 4.24-2.32 4.53 0 5.37 2.98 5.37 6.86V24h-4.47v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.34V8.25z"/></svg>
+            <span>LinkedIn</span><i class="chev"></i>
+          </a>
+        </div>
       </article>
     </div>
   </section>
 
   <!-- ░░ CONTACT ░░ -->
   <section class="section contact" id="contact">
-    <div class="contact-panel">
-      <div class="section-head left">
-        <span class="kicker" data-i18n="con.kicker">// Ingaggia</span>
-        <h2 data-i18n="con.h2">Puntami su un target.</h2>
-        <p data-i18n="con.p">Solo ingaggi autorizzati. Dimmi lo scope — ti dirò dove si rompe.</p>
+    <div class="contact-band">
+      <span class="kicker" data-i18n="con.kicker">Contatti</span>
+      <h2 data-i18n="con.h2">Hai una segnalazione o un’idea di ricerca?</h2>
+      <p data-i18n="con.p">Scrivimi per collaborazioni, segnalazioni di vulnerabilità o domande sui miei report.</p>
+      <div class="contact-actions">
+        <a class="pill pill-light pill-lg" href="mailto:nightscry.team@outlook.com"><span>nightscry.team@outlook.com</span><i class="chev"></i></a>
+        <a class="pill pill-dark pill-lg" href="https://github.com/nightscry" target="_blank" rel="noopener noreferrer"><span>GitHub</span><i class="chev"></i></a>
+        <a class="pill pill-dark pill-lg" href="https://www.linkedin.com/company/nightscry-team/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><i class="chev"></i></a>
       </div>
-      <form class="form" id="engageForm" novalidate>
-        <div class="field">
-          <label for="org" data-i18n="lbl.org">Organizzazione</label>
-          <input id="org" name="org" type="text" placeholder="ACME S.p.A." data-i18n-ph="ph.org" required />
-        </div>
-        <div class="field">
-          <label for="email" data-i18n="lbl.email">Email di contatto</label>
-          <input id="email" name="email" type="email" placeholder="security@acme.com" required />
-        </div>
-        <div class="field">
-          <label for="scope" data-i18n="lbl.scope">Tipo di ingaggio</label>
-          <select id="scope" name="scope">
-            <option data-i18n="opt.desktop">Reverse Engineering Desktop</option>
-            <option data-i18n="opt.mobile">Reverse Engineering Mobile</option>
-            <option data-i18n="opt.web">Pentest Web Application</option>
-            <option data-i18n="opt.api">Pentest API</option>
-            <option data-i18n="opt.full">Spettro completo / Red Team</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="brief" data-i18n="lbl.brief">Brief</label>
-          <textarea id="brief" name="brief" rows="4" placeholder="Target, scope, tempistiche, dettagli di autorizzazione…" data-i18n-ph="ph.brief"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary full" data-i18n="btn.submit">Trasmetti richiesta</button>
-        <p class="form-note" id="formNote" data-i18n="form.note" hidden>◉ Apertura del client email — invia il messaggio precompilato per contattarci.</p>
-      </form>
     </div>
   </section>
 </main>
 
 <!-- ░░ FOOTER ░░ -->
 <footer class="footer">
-  <div class="footer-brand">
-    <span class="brand-mark sm" id="footLogo"></span>
-    <span>NIGHT<span class="accent">SCRY</span> TEAM</span>
+  <div class="footer-top">
+    <div class="footer-col footer-id">
+      <div class="footer-brand">
+        <span class="brand-mark sm" id="footLogo"></span>
+        <span>NIGHT<span class="accent">SCRY</span></span>
+      </div>
+      <p class="footer-tag" data-i18n="footer.tag">VEDI&nbsp;TUTTO. SFRUTTA&nbsp;OGNI&nbsp;DEBOLEZZA.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="foot.nav">Navigazione</h4>
+      <a href="#top">Home</a>
+      <a href="#research" data-i18n="nav.research">Ricerca</a>
+      <a href="#areas" data-i18n="nav.areas">Aree</a>
+      <a href="#method" data-i18n="nav.method">Metodo</a>
+      <a href="#about" data-i18n="nav.about">Chi sono</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="nav.projects">Progetti</h4>
+      <a href="pdf/Italian_Cybersecurity_-_Nightscry_OSINT_Report.pdf" target="_blank" rel="noopener noreferrer">Italian Cybersecurity</a>
+      <a href="https://github.com/nightscry/EyeTrace" target="_blank" rel="noopener noreferrer">EyeTrace</a>
+      <a href="portfolio.html" data-i18n="res.all">Tutti i progetti</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="foot.follow">Seguimi</h4>
+      <div class="footer-social">
+        <a href="https://github.com/nightscry" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/nightscry-team/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.24 8.25h4.47V24H.24V8.25zM8.34 8.25h4.29v2.15h.06c.6-1.13 2.06-2.32 4.24-2.32 4.53 0 5.37 2.98 5.37 6.86V24h-4.47v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.34V8.25z"/></svg>
+        </a>
+        <a href="mailto:nightscry.team@outlook.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2z M2 6l10 7 10-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
-  <p class="footer-tag"><span class="br">[</span><span class="footer-tag-txt" data-i18n="footer.tag">VEDI&nbsp;TUTTO. SFRUTTA&nbsp;OGNI&nbsp;DEBOLEZZA.</span><span class="br">]</span></p>
-  <p class="footer-legal">Roberto Gianfranco Savi · P.IVA 04930840162 · <a href="mailto:nightscry.team@outlook.com">nightscry.team@outlook.com</a></p>
-  <p class="footer-fine"><span data-i18n="footer.fine">Offensive security · Solo test autorizzati · © </span><span id="yr"></span></p>
+  <div class="footer-bottom">
+    <p class="footer-fine"><span data-i18n="footer.fine">Ricerca indipendente · Disclosure responsabile · © </span><span id="yr"></span></p>
+  </div>
 </footer>
 
 <script src="logo.js"></script>
