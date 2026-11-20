@@ -58,7 +58,7 @@
 
     <div class="cards projects" id="projectGrid">
 
-      <article class="card proj" data-cat="research">
+      <article class="card proj" id="cve-2015-2050" data-cat="research">
         <div class="proj-shot">
           <img src="assets/cover-cve-2015-2050.svg" width="800" height="588" loading="lazy" decoding="async"
                alt="CVE-2015-2050 sul D-Link DAP-1320: la chiamata sprintf/system vulnerabile e una shell root." />
@@ -78,7 +78,7 @@
         </div>
       </article>
 
-      <article class="card proj" data-cat="tool osint">
+      <article class="card proj" id="eyetrace" data-cat="tool osint">
         <div class="proj-shot">
           <img src="assets/eyetrace-graph.webp" width="800" height="588" loading="lazy" decoding="async"
                alt="EyeTrace tracing a Bitcoin wallet: its counterparty addresses drawn as a force-directed graph, with balance and address in the side panel." />
@@ -98,7 +98,7 @@
         </div>
       </article>
 
-      <article class="card proj" data-cat="research">
+      <article class="card proj" id="italian-cybersecurity" data-cat="research">
         <div class="proj-shot">
           <img src="assets/cover-italian-cybersecurity.png" width="800" height="588" loading="lazy" decoding="async"
                alt="Copertina del report Italian Cybersecurity di NightSCRY." />
@@ -120,6 +120,8 @@
 
       <p class="empty-note" id="projectsEmpty" data-i18n="empty.note" hidden>◉ Niente pubblicato in questa categoria — torna presto.</p>
     </div>
+
+    <button type="button" class="chip show-all" id="showAllProjects" hidden>← <span data-i18n="res.all">Tutti i progetti</span></button>
   </section>
 </main>
 
