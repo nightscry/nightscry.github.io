@@ -58,6 +58,26 @@
 
     <div class="cards projects" id="projectGrid">
 
+      <article class="card proj" data-cat="research">
+        <div class="proj-shot">
+          <img src="assets/cover-cve-2015-2050.svg" width="800" height="588" loading="lazy" decoding="async"
+               alt="CVE-2015-2050 sul D-Link DAP-1320: la chiamata sprintf/system vulnerabile e una shell root." />
+          <span class="proj-status" data-i18n="status.done">Fatto</span>
+        </div>
+        <h3>CVE-2015-2050 — D-Link DAP-1320</h3>
+        <p class="proj-line" data-i18n="cve.line">Un aggiornamento firmware. Una shell di root.</p>
+        <p data-i18n="cve.desc">Riproduzione di CVE-2015-2050: OS command injection (CWE-78) nel meccanismo di aggiornamento firmware del D-Link DAP-1320 (Rev Ax, firmware precedenti a 1.21b05). Il dispositivo si fida della risposta del server di update e passa il campo &lt;Firmware&gt; a system() senza alcuna sanitizzazione: da posizione man-in-the-middle diventa esecuzione di comandi come root. Firmware emulato con QEMU + Docker, laboratorio MITM completo (ARP/DNS spoofing) e analisi in Ghidra fino alla chiamata vulnerabile. Tutto in un lab isolato, su un dispositivo EOL.</p>
+        <ul class="tags"><li>Firmware</li><li>Ghidra</li><li>QEMU</li><li>Docker</li><li>MITM</li><li>CWE-78</li></ul>
+        <div class="proj-foot">
+          <span class="proj-meta">CVSS 10.0 · Write-up</span>
+          <a class="proj-link" href="https://github.com/nightscry/CVE-2015-2050-DAP-1320"
+             target="_blank" rel="noopener noreferrer" aria-label="CVE-2015-2050 su GitHub">
+            <span data-i18n="proj.code">Sorgente</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7 M9 7h8v8" /></svg>
+          </a>
+        </div>
+      </article>
+
       <article class="card proj" data-cat="tool osint">
         <div class="proj-shot">
           <img src="assets/eyetrace-graph.webp" width="800" height="588" loading="lazy" decoding="async"
@@ -123,6 +143,7 @@
     </div>
     <div class="footer-col">
       <h4 data-i18n="nav.projects">Progetti</h4>
+      <a href="https://github.com/nightscry/CVE-2015-2050-DAP-1320" target="_blank" rel="noopener noreferrer">CVE-2015-2050</a>
       <a href="pdf/Italian_Cybersecurity_-_Nightscry_OSINT_Report.pdf" target="_blank" rel="noopener noreferrer">Italian Cybersecurity</a>
       <a href="https://github.com/nightscry/EyeTrace" target="_blank" rel="noopener noreferrer">EyeTrace</a>
       <a href="portfolio.html" data-i18n="res.all">Tutti i progetti</a>

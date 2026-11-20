@@ -337,6 +337,23 @@
       it: '🇮🇹 «Ma sì, tanto chi vuoi che se ne accorga.» A quanto pare è questo l’approccio italiano alla web security. Stavo facendo OSINT. Ho trovato una web application. Inviato un carattere: ’ — SQL ERROR. Poi Censys ha mostrato lo stesso software su 36 installazioni esposte. Non ho sfruttato nulla. Non ho toccato dati dei clienti. Mi sono fermato all’errore. Un apostrofo. 36 installazioni. Peak Italian cybersecurity. 💀 Ricerca completa nel PDF.',
       en: '🇮🇹 “Ma sì, tanto chi vuoi che se ne accorga.” Apparently, that’s the Italian approach to web security. I was doing OSINT. Found a web application. Sent one character: ’ — SQL ERROR. Then Censys showed the same software across 36 exposed installations. I didn’t exploit anything. I didn’t touch customer data. I stopped at the error. One apostrophe. 36 installations. Peak Italian cybersecurity. 💀 Full research in the PDF.',
     },
+    'tag.cve': {
+      it: 'RESEARCH · FIRMWARE · RCE',
+      en: 'RESEARCH · FIRMWARE · RCE',
+    },
+    'cve.line': { it: 'Un aggiornamento firmware. Una shell di root.', en: 'One firmware update. One root shell.' },
+    'feat.cve': {
+      it: 'Riproduzione completa di una command injection nel meccanismo di aggiornamento del DAP-1320: il campo &lt;Firmware&gt; della risposta del server finisce dritto in system(). Firmware emulato con QEMU + Docker, laboratorio MITM per intercettare l’update e analisi in Ghidra fino alla riga vulnerabile.',
+      en: 'A full reproduction of a command injection in the DAP-1320 update mechanism: the &lt;Firmware&gt; field of the server response goes straight into system(). Firmware emulated with QEMU + Docker, a MITM lab to intercept the update, and Ghidra analysis down to the vulnerable line.',
+    },
+    'feat.c1': { it: 'CVSS v2', en: 'CVSS v2' },
+    'feat.c2': { it: 'esecuzione comandi', en: 'command execution' },
+    'feat.c3': { it: 'fix di D-Link', en: 'D-Link fix' },
+    'res.wu':  { it: 'Leggi il write-up', en: 'Read the write-up' },
+    'cve.desc': {
+      it: 'Riproduzione di CVE-2015-2050: OS command injection (CWE-78) nel meccanismo di aggiornamento firmware del D-Link DAP-1320 (Rev Ax, firmware precedenti a 1.21b05). Il dispositivo si fida della risposta del server di update e passa il campo &lt;Firmware&gt; a system() senza alcuna sanitizzazione: da posizione man-in-the-middle diventa esecuzione di comandi come root. Firmware emulato con QEMU + Docker, laboratorio MITM completo (ARP/DNS spoofing) e analisi in Ghidra fino alla chiamata vulnerabile. Tutto in un lab isolato, su un dispositivo EOL.',
+      en: 'Reproducing CVE-2015-2050: an OS command injection (CWE-78) in the firmware update mechanism of the D-Link DAP-1320 (Rev Ax, firmware before 1.21b05). The device trusts the update server’s response and passes the &lt;Firmware&gt; field to system() with no sanitization: from a man-in-the-middle position that becomes command execution as root. Firmware emulated with QEMU + Docker, a full MITM lab (ARP/DNS spoofing) and Ghidra analysis down to the vulnerable call. All in an isolated lab, against an EOL device.',
+    },
     'empty.note': { it: '◉ Niente pubblicato in questa categoria — torna presto.', en: '◉ Nothing published in this category yet — check back soon.' },
   };
 

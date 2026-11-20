@@ -53,7 +53,7 @@
         <a href="portfolio.html" class="btn btn-ghost" data-i18n="hero.cta2">Esplora i progetti</a>
       </div>
       <ul class="hero-stats">
-        <li><b data-count="2">0</b><span data-i18n="stat.pub">Pubblicazioni rilasciate</span></li>
+        <li><b data-count="3">0</b><span data-i18n="stat.pub">Pubblicazioni rilasciate</span></li>
         <li><b data-count="36">0</b><span data-i18n="stat.exposed">Installazioni esposte identificate</span></li>
         <li><b data-count="3">0</b><span data-i18n="stat.conn">Connettori keyless in EyeTrace</span></li>
         <li><b data-count="0">0</b><span data-i18n="stat.data">Dati di terzi toccati</span></li>
@@ -93,23 +93,32 @@
       <p data-i18n="res.p">Studio il comportamento degli attaccanti e le debolezze dei sistemi reali — poi rilascio strumenti e report in chiaro.</p>
     </div>
 
-    <a class="feature" href="pdf/Italian_Cybersecurity_-_Nightscry_OSINT_Report.pdf" target="_blank" rel="noopener noreferrer">
-      <div class="feature-shot"><img src="assets/cover-italian-cybersecurity.png" width="800" height="588" loading="lazy" decoding="async" alt="Copertina del report OSINT Italian Cybersecurity di NightSCRY." /></div>
+    <a class="feature" href="https://github.com/nightscry/CVE-2015-2050-DAP-1320" target="_blank" rel="noopener noreferrer">
+      <div class="feature-shot"><img src="assets/cover-cve-2015-2050.svg" width="800" height="588" loading="lazy" decoding="async" alt="CVE-2015-2050 sul D-Link DAP-1320: la chiamata sprintf/system vulnerabile e una shell root." /></div>
       <div class="feature-body">
-        <span class="res-tag" data-i18n="tag.ita">REPORT · OSINT · SQLi</span>
-        <h3>Italian Cybersecurity</h3>
-        <p class="feature-line" data-i18n="ita.line">La cybersecurity italiana è un’altra cosa.</p>
-        <p data-i18n="feat.ita">Un apostrofo inviato a una web application ha restituito un SQL ERROR. Censys ha poi mostrato lo stesso software su 36 installazioni esposte. Nessun exploit, nessun dato toccato: mi sono fermato all’errore e ho documentato tutto.</p>
+        <span class="res-tag" data-i18n="tag.cve">RESEARCH · FIRMWARE · RCE</span>
+        <h3>CVE-2015-2050 — D-Link DAP-1320</h3>
+        <p class="feature-line" data-i18n="cve.line">Un aggiornamento firmware. Una shell di root.</p>
+        <p data-i18n="feat.cve">Riproduzione completa di una command injection nel meccanismo di aggiornamento del DAP-1320: il campo &lt;Firmware&gt; della risposta del server finisce dritto in system(). Firmware emulato con QEMU + Docker, laboratorio MITM per intercettare l’update e analisi in Ghidra fino alla riga vulnerabile.</p>
         <ul class="feature-facts">
-          <li><b>36</b><span data-i18n="feat.f1">installazioni esposte</span></li>
-          <li><b>1</b><span data-i18n="feat.f2">apostrofo</span></li>
-          <li><b>0</b><span data-i18n="feat.f3">dati toccati</span></li>
+          <li><b>10.0</b><span data-i18n="feat.c1">CVSS v2</span></li>
+          <li><b>root</b><span data-i18n="feat.c2">esecuzione comandi</span></li>
+          <li><b>1.21b05</b><span data-i18n="feat.c3">fix di D-Link</span></li>
         </ul>
-        <span class="pill pill-light"><span data-i18n="res.pdf">Leggi il report</span><i class="chev"></i></span>
+        <span class="pill pill-light"><span data-i18n="res.wu">Leggi il write-up</span><i class="chev"></i></span>
       </div>
     </a>
 
     <div class="res-grid">
+      <a class="res-card" href="pdf/Italian_Cybersecurity_-_Nightscry_OSINT_Report.pdf" target="_blank" rel="noopener noreferrer">
+        <div class="res-shot"><img src="assets/cover-italian-cybersecurity.png" width="800" height="588" loading="lazy" decoding="async" alt="Copertina del report OSINT Italian Cybersecurity di NightSCRY." /></div>
+        <div class="res-body">
+          <span class="res-tag" data-i18n="tag.ita">REPORT · OSINT · SQLi</span>
+          <h3>Italian Cybersecurity</h3>
+          <p data-i18n="feat.ita">Un apostrofo inviato a una web application ha restituito un SQL ERROR. Censys ha poi mostrato lo stesso software su 36 installazioni esposte. Nessun exploit, nessun dato toccato: mi sono fermato all’errore e ho documentato tutto.</p>
+          <span class="res-more"><span data-i18n="res.pdf">Leggi il report</span> →</span>
+        </div>
+      </a>
       <a class="res-card" href="https://github.com/nightscry/EyeTrace" target="_blank" rel="noopener noreferrer">
         <div class="res-shot"><img src="assets/eyetrace-graph.webp" width="800" height="588" loading="lazy" decoding="async" alt="EyeTrace: grafo force-directed delle controparti di un wallet Bitcoin." /></div>
         <div class="res-body">
@@ -421,6 +430,7 @@
     </div>
     <div class="footer-col">
       <h4 data-i18n="nav.projects">Progetti</h4>
+      <a href="https://github.com/nightscry/CVE-2015-2050-DAP-1320" target="_blank" rel="noopener noreferrer">CVE-2015-2050</a>
       <a href="pdf/Italian_Cybersecurity_-_Nightscry_OSINT_Report.pdf" target="_blank" rel="noopener noreferrer">Italian Cybersecurity</a>
       <a href="https://github.com/nightscry/EyeTrace" target="_blank" rel="noopener noreferrer">EyeTrace</a>
       <a href="portfolio.html" data-i18n="res.all">Tutti i progetti</a>
