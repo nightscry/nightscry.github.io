@@ -83,8 +83,8 @@
       en: 'data touched',
     },
     'feat.eye': {
-      it: 'Tracer multi-chain di wallet: riconosce la chain dal solo indirizzo tramite checksum crittografico e mappa le controparti come grafo interattivo.',
-      en: 'Multi-chain wallet tracer: it recognises the chain from the address alone via cryptographic checksum and maps counterparties as an interactive graph.',
+      it: 'Tracer multi-chain di wallet su sei blockchain: riconosce la chain dal solo indirizzo tramite checksum crittografico e segue il denaro hop dopo hop su un grafo interattivo.',
+      en: 'Multi-chain wallet tracer across six blockchains: it recognises the chain from the address alone via cryptographic checksum and follows the money hop by hop on an interactive graph.',
     },
     'res.pdf':  { it: 'Leggi il report', en: 'Read the report' },
     'res.all':  { it: 'Tutti i progetti', en: 'All projects' },
@@ -239,8 +239,8 @@
       en: 'REPORT · OSINT · SQLi',
     },
     'tag.eye': {
-      it: 'TOOL · BLOCKCHAIN OSINT · BETA',
-      en: 'TOOL · BLOCKCHAIN OSINT · BETA',
+      it: 'TOOL · BLOCKCHAIN OSINT · v1.0',
+      en: 'TOOL · BLOCKCHAIN OSINT · v1.0',
     },
     'tag.soon': {
       it: 'WORK IN PROGRESS · OSINT',
@@ -323,14 +323,15 @@
       en: 'OSINT',
     },
     'status.beta': { it: 'Beta', en: 'Beta' },
+    'status.v1':   { it: 'v1.0', en: 'v1.0' },
     'status.done': {
       it: 'Fatto',
       en: 'Done',
     },
     'eye.line': { it: 'Vedi ogni transazione. Traccia ogni wallet.', en: 'See every transaction. Trace every wallet.' },
     'eye.desc': {
-      it: 'Intelligence blockchain multi-chain e tracer delle transazioni dei wallet. Identifica la chain dal solo indirizzo tramite validazione del checksum crittografico — Base58Check, Bech32/Bech32m, EIP-55 — poi mappa le controparti come grafo interattivo force-directed. Tre connettori keyless, nessuna API key da configurare.',
-      en: 'Multi-chain blockchain intelligence and wallet transaction tracer. It identifies the chain from the address alone through cryptographic checksum validation — Base58Check, Bech32/Bech32m, EIP-55 — then maps the counterparties as an interactive force-directed graph. Three keyless connectors, no API keys to configure.',
+      it: 'Intelligence blockchain multi-chain e tracer delle transazioni dei wallet. Riconosce la chain dal solo indirizzo con validazione crittografica completa — Base58Check, Bech32/Bech32m, EIP-55 — su Bitcoin, Ethereum, Dogecoin, Tron, XRP e Solana. Segue il denaro hop dopo hop su un grafo interattivo force-directed, con token (ERC-20, TRC-20, SPL) identificati per contratto, etichette di exchange e mixer ed export dell’indagine in JSON o CSV. Sei connettori keyless, nessuna API key da configurare.',
+      en: 'Multi-chain blockchain intelligence and wallet transaction tracer. It recognises the chain from the address alone with full cryptographic validation — Base58Check, Bech32/Bech32m, EIP-55 — across Bitcoin, Ethereum, Dogecoin, Tron, XRP and Solana. It follows the money hop by hop on an interactive force-directed graph, with tokens (ERC-20, TRC-20, SPL) identified by contract, exchange and mixer labels, and investigations exported as JSON or CSV. Six keyless connectors, no API keys to configure.',
     },
     'ita.line': { it: 'La cybersecurity italiana è un’altra cosa.', en: 'Italian Cybersecurity is something else.' },
     'ita.desc': {
